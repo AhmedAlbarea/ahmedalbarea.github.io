@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed Al-barea/HOME</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="body">
+
+    <header class="header">
+
+        <!-- logo and name -->
+        <div class="header-left">
+            <a href="index.html" class="logo-container-a"><img class="logo-img" src="./pics/logo.png" alt="my logo"></a>
+
+            <a href="index.html" class="myname-a">AHMED AL-BAREA</a>
+        </div>
+
+        <div class="header-right">
+            <!-- desktop nav menu -->
+            <a href="index.html" class="nav-item-a" id="nav-item-a-current">HOME</a>
+            <a href="#work-section" class="nav-item-a">WORK</a>
+            <a href="mailto:barea.ab@gmail.com" class="nav-item-a">CONTACT</a>
+            <a href="#" class="nav-item-a">ABOUT</a>
+
+            <!-- mobile menu Button -->
+            <button class="btn-burger-menu" id="btn" onclick="clickMenu()">
+                <img class="menu-img" id="menuImg" src="./pics/open-menu.png" alt="burger menu icon">
+                <img class="close-menu-img" id="closeMenuImg" src="./pics/close-menu.png"
+                    alt="close menu icon"></button>
+        </div>
+    </header>
+
+    <!-- main container -->
+    <div class="main-container-div">
+
+        <!-- mobile menu -->
+        <div class="mobile-menu-container" id="mobile-menu">
+            <a href="index.html" class="nav-item-a-mobile" id="nav-item-a-current">HOME</a>
+            <a href="#work-section" class="nav-item-a-mobile" id="mobile-work-btn"
+                onclick="clickMobileMenuItem()">WORK</a>
+            <a href="mailto:barea.ab@gmail.com" class="nav-item-a-mobile" id="mobile-contact-btn"
+                onclick="clickMobileMenuItem()">CONTACT</a>
+            <a href="#" class="nav-item-a-mobile">ABOUT</a>
+        </div>
+
+        <!-- quote -->
+        <div class="quote-container">
+            <h2 class="quote">
+                A UX Designer who believes that <br> “ Simplicity is the key to brilliance “.
+            </h2>
+        </div>
+
+        <!-- just to go to work section -->
+        <div id="work-section"></div>
+
+        <!-- work title -->
+        <div class="work-title-container">
+            <span class="left-span"></span>
+            <span class="middle-span">
+                <h2 class="title-text">WORK</h2>
+            </span>
+            <span class="right-span"></span>
+        </div>
+
+        <!-- first two projects layout -->
+        <div class="projecs-layout-container">
+            <!-- projects 1 box -->
+            <a href="#" class="project-box">
+                <img class="project-img" src="./project-1/mockups.png" alt="">
+                <h2 class="project-title">Project 1
+                    zzzzzzz</h2>
+                <h3 class="project-summary">project summary
+                    asdfsadfsadfasdfasdfasdfasdfasfdasdfasfasdfafasfasfsadfsadfsdfasdfsafasdfsdfasdfsadfsdfsadfasfasfasdfasfdsadfsadfsadasdfasdfasfsadfsadfsadfasdfasdfsafdasdfasdfsadfasdfsadfsafsadfasdfdfasdfasdfasdfasfsadfasdfasdfasdfasdffsadfsadfsadfsadfsdfzzzzzzzzzzzzzz
+                </h3>
+                <span class="open-project">see more</span>
+                <!-- <button type="button" class="open-project"> See more </button> -->
+            </a>
+
+            <!-- projects 2 box -->
+            <a href="#" class="project-box">
+                <img class="project-img" src="./project-1/mockups.png" alt="">
+                <h2 class="project-title">Project 2
+                    asfdasdfasdfasdfasdfsadfsadfasdfsdfasdfasdfasfzzzzzzzzzzzzzzzzzzzzzzzzzzz</h2>
+                <h3 class="project-summary">project summary
+                    asdfsadfsadfasdfasdfasdfasdfasfdasdfasfasdfafasfasfsadfsadfsdfasdfsafasdfsdfasdfsadfsdfsadfasfasfasdfasfdsadfsadfsadasdfasdfasfsadfsadfsadfasdfasdfsafdasdfasdfsadfasdfsadfsafsadfasdfdfasdfasdfasdfasfsadfasdfasdfasdfasdffsadfsadfsadfsadfsdfzzzzzzzzzzzzzz
+                </h3>
+                <span class="open-project">see more</span>
+                <!-- <button type="button" class="open-project"> See more </button> -->
+            </a>
+        </div>
+
+        <!-- second two projects layout -->
+        <div class="projecs-layout-container">
+            <!-- projects 3 box -->
+            <a href="#" class="project-box">
+                <img class="project-img" src="./project-1/mockups.png" alt="">
+                <h2 class="project-title">Project 3
+                    asfdasdfasdfasdfasdfsadfsadfasdfsdfasdfasdfasfzzzzzzzzzzzzzzzzzzzzzzzzzzz</h2>
+                <h3 class="project-summary">project summary
+                    asdfsadfsadfasdfasdfasdfasdfasfdasdfasfasdfafasfasfsadfsadfsdfasdfsafasdfsdfasdfsadfsdfsadfasfasfasdfasfdsadfsadfsadasdfasdfasfsadfsadfsadfasdfasdfsafdasdfasdfsadfasdfsadfsafsadfasdfdfasdfasdfasdfasfsadfasdfasdfasdfasdffsadfsadfsadfsadfsdfzzzzzzzzzzzzzz
+                </h3>
+                <span class="open-project">see more</span>
+                <!-- <button type="button" class="open-project"> See more </button> -->
+            </a>
+
+            <!-- projects 4 box -->
+            <a href="#" class="project-box">
+                <img class="project-img" src="./project-1/mockups.png" alt="">
+                <h2 class="project-title">Project 4
+                    asfdasdfasdfasdfasdfsadfsadfasdfsdfasdfasdfasfzzzzzzzzzzzzzzzzzzzzzzzzzzz</h2>
+                <h3 class="project-summary">project summary
+                    asdfsadfsadfasdfasdfasdfasdfasfdasdfasfasdfafasfasfsadfsadfsdfasdfsafasdfsdfasdfsadfsdfsadfasfasfasdfasfdsadfsadfsadasdfasdfasfsadfsadfsadfasdfasdfsafdasdfasdfsadfasdfsadfsafsadfasdfdfasdfasdfasdfasfsadfasdfasdfasdfasdffsadfsadfsadfsadfsdfzzzzzzzzzzzzzz
+                </h3>
+                <span class="open-project">see more</span>
+                <!-- <button type="button" class="open-project"> See more </button> -->
+            </a>
+        </div>
+
+
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+
+        <div class="footer-left footer-div">
+            <a href="https://www.linkedin.com/in/ahmed-ali-49a061223?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BLLTN0OodRJSd0G4rEEV5pw%3D%3D"
+                class="linkedin-a"><img class="linkedin-img" src="./pics/linkedin.png" alt="my linkedin"></a>
+        </div>
+        <div class="footer-middle footer-div">
+            <h6 class="copyright">Copyright &copy; Ahmed Al-barea
+            </h6>
+        </div>
+        <div class="footer-right footer-div">
+            <a title="How about some tea!" href="https://paypal.me/AhmedBarea?country.x=C2&locale.x=en_US"
+                class="coffee-a"><img class="coffee-img" src="./pics/coffee.png" alt="buy me a coffee"> </a>
+        </div>
+
+    </footer>
+
+</body>
+
+<!-- js -->
+<script>
+    var menu = document.getElementById("mobile-menu");
+    var menuImg = document.getElementById("menuImg");
+    var closeMenuImg = document.getElementById("closeMenuImg");
+
+    menu.style.display = "block";
+    menu.style.marginLeft = "1000px";
+    menu.style.opacity = "1";
+    menuImg.style.display = "block";
+    closeMenuImg.style.display = "none";
+
+    function clickMenu() {
+
+        if (menuImg.style.display == "block") {
+
+            // btn animation
+            menuImg.style.transform = "rotateZ(180deg)";
+            menuImg.style.transition = "0.3s";
+            // menu animation
+            menu.style.marginLeft = "0";
+            menu.style.opacity = "1";
+            menu.style.transition = "0.5s";
+
+            setTimeout(() => {
+
+                menuImg.style.display = "none";
+                closeMenuImg.style.display = "block";
+                menu.style.display = "block";
+
+                // untoggle animation
+                menuImg.style.transform = "rotateY(0deg)";
+                menuImg.style.width = "80px";
+                menuImg.style.transition = "0.3s";
+
+            }, 200);
+
+        } else {
+
+            // btn animation
+            closeMenuImg.style.transform = "rotateZ(-180deg)";
+            closeMenuImg.style.transition = "0.3s";
+            // menu animation
+            menu.style.marginLeft = "1000px";
+            menu.style.transition = "0.4s";
+
+            setTimeout(() => {
+
+                menuImg.style.display = "block";
+                closeMenuImg.style.display = "none";
+
+                // untoggle animation
+                closeMenuImg.style.transform = "rotateY(0deg)";
+                closeMenuImg.style.width = "80px";
+                closeMenuImg.style.transition = "0.3s";
+
+            }, 200);
+
+        }
+    }
+
+    // close mobile menu after btn click
+    var mobileWorkBtn = document.getElementById(mobile - work - btn);
+    var mobileContactBtn = document.getElementById(mobile - contact - btn);
+
+    function clickMobileMenuItem() {
+
+        // btn animation
+        closeMenuImg.style.transform = "rotateZ(-180deg)";
+        closeMenuImg.style.transition = "0.3s";
+        // menu animation
+        menu.style.marginLeft = "1000px";
+        menu.style.transition = "0.4s";
+
+        setTimeout(() => {
+
+            menuImg.style.display = "block";
+            closeMenuImg.style.display = "none";
+
+            // untoggle animation
+            closeMenuImg.style.transform = "rotateY(0deg)";
+            closeMenuImg.style.width = "80px";
+            closeMenuImg.style.transition = "0.3s";
+
+        }, 200);
+
+    }
+
+
+</script>
+
+</html>

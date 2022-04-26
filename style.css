@@ -132,7 +132,7 @@ body{
 /* go to work div 
     NOTE: its height must match the element before it, which is here quote container */
 
-#work-section {
+.Work{
     position: absolute;
     top: 150px;
     width: 100%;

@@ -154,7 +154,7 @@ body {
 
 /* work title start */
 
-.work-title-container {
+.section-title-container {
     height: fit-content;
     display: flex;
     align-items: baseline;
@@ -247,7 +247,6 @@ body {
     color: #fff;
     opacity: 0;
     line-height: 1.5;
-    /* font-size: 1rem; */
 }
 
 .open-project {
@@ -596,6 +595,10 @@ body {
 
     .project-title {
         font-size: 3vh;
+    }
+
+    .project-summary {
+        font-size: 16px;
     }
 
     .about-topic {

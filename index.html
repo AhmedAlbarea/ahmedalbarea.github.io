@@ -22,12 +22,12 @@
 
         <div class="header-right">
             <!-- desktop nav menu -->
-            <a href="index.html" class="nav-item-a" id="nav-item-a-current">HOME</a>
+            <a href="index.html" class="nav-item-a" onclick="removeUrlAnchor()">HOME</a>
             <a href="#Work" class="nav-item-a">WORK</a>
             <a href="mailto:barea.ab@gmail.com" class="nav-item-a">CONTACT</a>
-            <a href="#" class="nav-item-a">ABOUT</a>
+            <a href="#About" class="nav-item-a">ABOUT</a>
 
-            <!-- mobile menu Button -->
+            <!--btn burger menu  -->
             <button class="btn-burger-menu" id="btn" onclick="clickMenu()">
                 <img class="menu-img" id="menuImg" src="./pics/open-menu.png" alt="burger menu icon">
                 <img class="close-menu-img" id="closeMenuImg" src="./pics/close-menu.png"
@@ -40,31 +40,32 @@
 
         <!-- mobile menu -->
         <div class="mobile-menu-container" id="mobile-menu">
-            <a href="index.html" class="nav-item-a-mobile" id="nav-item-a-current">HOME</a>
-            <a href="#Work" class="nav-item-a-mobile" id="mobile-work-btn"
-                onclick="clickMobileMenuItem()">WORK</a>
+            <a href="index.html" class="nav-item-a-mobile">HOME</a>
+            <a href="#Work" class="nav-item-a-mobile" id="mobile-work-btn" onclick="clickMobileMenuItem()">WORK</a>
             <a href="mailto:barea.ab@gmail.com" class="nav-item-a-mobile" id="mobile-contact-btn"
                 onclick="clickMobileMenuItem()">CONTACT</a>
-            <a href="#" class="nav-item-a-mobile">ABOUT</a>
+            <a href="#About" class="nav-item-a-mobile" id="mobile-about-btn" onclick="clickMobileMenuItem()">ABOUT</a>
         </div>
 
         <!-- quote -->
         <div class="quote-container">
-            <h2 class="quote">
-                A UX Designer who believes that <br> “ Simplicity is the key to brilliance “. <br><br> This is my new portfolio. coming soon.
-            </h2>
+            <h1 class="quote">
+                A UX Designer who believes that <br> “ Simplicity is the key to brilliance “. <br><br>
+                <span class="new" style="color:#00ff00">This is my new
+                    portfolio. I just finished home page. projects and other things are coming soon.</span>
+            </h1>
         </div>
 
         <!-- just to go to work section -->
-        <div class="Work" id="Work"></div>
+        <div class="go-to-Work" id="Work"></div>
 
         <!-- work title -->
         <div class="work-title-container">
-            <span class="left-span"></span>
-            <span class="middle-span">
+            <div class="left-line"></div>
+            <div class="middle-line">
                 <h2 class="title-text">WORK</h2>
-            </span>
-            <span class="right-span"></span>
+            </div>
+            <div class="right-line"></div>
         </div>
 
         <!-- first two projects layout -->
@@ -73,9 +74,9 @@
             <a href="#" class="project-box">
                 <img class="project-img" src="./project-1/mockups.png" alt="">
                 <h2 class="project-title">Project 1
-                    zzzzzzz</h2>
+                    </h2>
                 <h3 class="project-summary">project summary
-                    asdfsadfsadfasdfasdfasdfasdfasfdasdfasfasdfafasfasfsadfsadfsdfasdfsafasdfsdfasdfsadfsdfsadfasfasfasdfasfdsadfsadfsadasdfasdfasfsadfsadfsadfasdfasdfsafdasdfasdfsadfasdfsadfsafsadfasdfdfasdfasdfasdfasfsadfasdfasdfasdfasdffsadfsadfsadfsadfsdfzzzzzzzzzzzzzz
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet consectetur adipiscing. Quis auctor elit sed vulputate mi sit amet mauris commodo. Est lorem ipsum dolor sit amet consectetur. Mauris vitae ultricies leo integer malesuada nunc. Lorem ipsum dolor sit amet consectetur adipiscing elit. 
                 </h3>
                 <span class="open-project">see more</span>
                 <!-- <button type="button" class="open-project"> See more </button> -->
@@ -84,10 +85,9 @@
             <!-- projects 2 box -->
             <a href="#" class="project-box">
                 <img class="project-img" src="./project-1/mockups.png" alt="">
-                <h2 class="project-title">Project 2
-                    asfdasdfasdfasdfasdfsadfsadfasdfsdfasdfasdfasfzzzzzzzzzzzzzzzzzzzzzzzzzzz</h2>
+                <h2 class="project-title">Project 2</h2>
                 <h3 class="project-summary">project summary
-                    asdfsadfsadfasdfasdfasdfasdfasfdasdfasfasdfafasfasfsadfsadfsdfasdfsafasdfsdfasdfsadfsdfsadfasfasfasdfasfdsadfsadfsadasdfasdfasfsadfsadfsadfasdfasdfsafdasdfasdfsadfasdfsadfsafsadfasdfdfasdfasdfasdfasfsadfasdfasdfasdfasdffsadfsadfsadfsadfsdfzzzzzzzzzzzzzz
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet consectetur adipiscing. Quis auctor elit sed vulputate mi sit amet mauris commodo. Est lorem ipsum dolor sit amet consectetur. Mauris vitae ultricies leo integer malesuada nunc. Lorem ipsum dolor sit amet consectetur adipiscing elit.
                 </h3>
                 <span class="open-project">see more</span>
                 <!-- <button type="button" class="open-project"> See more </button> -->
@@ -99,10 +99,9 @@
             <!-- projects 3 box -->
             <a href="#" class="project-box">
                 <img class="project-img" src="./project-1/mockups.png" alt="">
-                <h2 class="project-title">Project 3
-                    asfdasdfasdfasdfasdfsadfsadfasdfsdfasdfasdfasfzzzzzzzzzzzzzzzzzzzzzzzzzzz</h2>
+                <h2 class="project-title">Project 3</h2>
                 <h3 class="project-summary">project summary
-                    asdfsadfsadfasdfasdfasdfasdfasfdasdfasfasdfafasfasfsadfsadfsdfasdfsafasdfsdfasdfsadfsdfsadfasfasfasdfasfdsadfsadfsadasdfasdfasfsadfsadfsadfasdfasdfsafdasdfasdfsadfasdfsadfsafsadfasdfdfasdfasdfasdfasfsadfasdfasdfasdfasdffsadfsadfsadfsadfsdfzzzzzzzzzzzzzz
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet consectetur adipiscing. Quis auctor elit sed vulputate mi sit amet mauris commodo. Est lorem ipsum dolor sit amet consectetur. Mauris vitae ultricies leo integer malesuada nunc. Lorem ipsum dolor sit amet consectetur adipiscing elit.
                 </h3>
                 <span class="open-project">see more</span>
                 <!-- <button type="button" class="open-project"> See more </button> -->
@@ -111,16 +110,88 @@
             <!-- projects 4 box -->
             <a href="#" class="project-box">
                 <img class="project-img" src="./project-1/mockups.png" alt="">
-                <h2 class="project-title">Project 4
-                    asfdasdfasdfasdfasdfsadfsadfasdfsdfasdfasdfasfzzzzzzzzzzzzzzzzzzzzzzzzzzz</h2>
+                <h2 class="project-title">Project 4</h2>
                 <h3 class="project-summary">project summary
-                    asdfsadfsadfasdfasdfasdfasdfasfdasdfasfasdfafasfasfsadfsadfsdfasdfsafasdfsdfasdfsadfsdfsadfasfasfasdfasfdsadfsadfsadasdfasdfasfsadfsadfsadfasdfasdfsafdasdfasdfsadfasdfsadfsafsadfasdfdfasdfasdfasdfasfsadfasdfasdfasdfasdffsadfsadfsadfsadfsdfzzzzzzzzzzzzzz
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet consectetur adipiscing. Quis auctor elit sed vulputate mi sit amet mauris commodo. Est lorem ipsum dolor sit amet consectetur. Mauris vitae ultricies leo integer malesuada nunc. Lorem ipsum dolor sit amet consectetur adipiscing elit.
                 </h3>
                 <span class="open-project">see more</span>
                 <!-- <button type="button" class="open-project"> See more </button> -->
             </a>
         </div>
 
+        <!-- third two projects layout -->
+        <div class="projecs-layout-container">
+            <!-- projects 5 box -->
+            <a href="#" class="project-box">
+                <img class="project-img" src="./project-1/mockups.png" alt="">
+                <h2 class="project-title">Project 5</h2>
+                <h3 class="project-summary">project summary
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet consectetur adipiscing. Quis auctor elit sed vulputate mi sit amet mauris commodo. Est lorem ipsum dolor sit amet consectetur. Mauris vitae ultricies leo integer malesuada nunc. Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                </h3>
+                <span class="open-project">see more</span>
+                <!-- <button type="button" class="open-project"> See more </button> -->
+            </a>
+
+            <!-- projects 6 box -->
+            <a href="#" class="project-box">
+                <img class="project-img" src="./project-1/mockups.png" alt="">
+                <h2 class="project-title">Project 6</h2>
+                <h3 class="project-summary">project summary
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet consectetur adipiscing. Quis auctor elit sed vulputate mi sit amet mauris commodo. Est lorem ipsum dolor sit amet consectetur. Mauris vitae ultricies leo integer malesuada nunc. Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                </h3>
+                <span class="open-project">see more</span>
+                <!-- <button type="button" class="open-project"> See more </button> -->
+            </a>
+        </div>
+
+    </div> <!-- End of main container -->
+
+
+    <!-- just to go to about section -->
+    <div class="go-to-about" id="About"></div>
+
+
+    <!-- About section -->
+    <div class="about-container">
+
+        <h2 class="about-title">About Me &#129312;</h2>
+
+        <h2 class="about-topic">
+            My journey to UX design and web development:
+        </h2>
+        <h4 class="about-details">
+
+            &bull; I got my bachelor's degree in business management in 2011.
+            <br>
+            <br>&bull; After college, I got a job offer in the Kingdom of Bahrain. After three months, it
+            didn't work out.
+            <br>
+            <br>&bull; After that, I got a temporary job as an inventory clerk in one of the largest groups in Bahrain
+            called <a class="about-links" href="https://ramezgroup.com/">Ramez Group</a>. I worked there for eight months.
+            <br>
+            <br>&bull; After that, I was recommended to work as a personnel affairs specialist in one of their
+            industrial branches called <a class="about-links" href="https://ramezgroup.com/companies/ramez-industrail/">
+                Ramez Industrial Company </a>. I worked there for three years.
+            <br>
+            <br>&bull; After that, I took my vacation to China. And unexpectedly, I settled there. I worked as an <a
+                class="about-links" href="./about-files/My-TEFL-Certificate.jpg">ESL</a> teacher for four years.
+            <br>
+            <br>&bull; After that, I got my <a href="https://coursera.org/share/67a9920cc1781717d8fcaa21999b6abf"
+                class="about-links">Google UX Design Professional Certificate</a> and started working as a freelance
+            UX designer till now.
+            <br>
+            <br>&bull; Besides being a freelance UX designer, I'm also learning web development (HTML, CSS, javascript,
+            php). I developed this portfolio myself.
+            <br>
+            <br>&bull; For more details, contact me or check my resume.
+        </h4>
+
+        <!-- resumes buttons  -->
+        <div class="resumes-btns-container">
+            <a class="resume-btn" href="./about-files/UX-Resume.pdf"> UX </a>
+            <a class="resume-btn" href="./about-files/Management-Resume.pdf"> Managment </a>
+            <a class="resume-btn" href="./about-files/Teaching-Resume.pdf"> Teaching </a>
+        </div>
 
     </div>
 
@@ -142,46 +213,74 @@
 
     </footer>
 
-</body>
 
-<!-- js -->
-<script>
-    var menu = document.getElementById("mobile-menu");
-    var menuImg = document.getElementById("menuImg");
-    var closeMenuImg = document.getElementById("closeMenuImg");
+    <!-- js -->
 
-    menu.style.display = "block";
-    menu.style.marginLeft = "1000px";
-    menu.style.opacity = "1";
-    menuImg.style.display = "block";
-    closeMenuImg.style.display = "none";
+    <script>
+        var menu = document.getElementById("mobile-menu");
+        var menuImg = document.getElementById("menuImg");
+        var closeMenuImg = document.getElementById("closeMenuImg");
 
-    function clickMenu() {
+        menu.style.display = "block";
+        menu.style.marginLeft = "1000px";
+        menu.style.opacity = "1";
+        menuImg.style.display = "block";
+        closeMenuImg.style.display = "none";
 
-        if (menuImg.style.display == "block") {
+        function clickMenu() {
 
-            // btn animation
-            menuImg.style.transform = "rotateZ(180deg)";
-            menuImg.style.transition = "0.3s";
-            // menu animation
-            menu.style.marginLeft = "0";
-            menu.style.opacity = "1";
-            menu.style.transition = "0.5s";
+            if (menuImg.style.display == "block") {
 
-            setTimeout(() => {
-
-                menuImg.style.display = "none";
-                closeMenuImg.style.display = "block";
-                menu.style.display = "block";
-
-                // untoggle animation
-                menuImg.style.transform = "rotateY(0deg)";
-                menuImg.style.width = "80px";
+                // btn animation
+                menuImg.style.transform = "rotateZ(180deg)";
                 menuImg.style.transition = "0.3s";
+                // menu animation
+                menu.style.marginLeft = "0";
+                menu.style.opacity = "1";
+                menu.style.transition = "0.5s";
 
-            }, 200);
+                setTimeout(() => {
 
-        } else {
+                    menuImg.style.display = "none";
+                    closeMenuImg.style.display = "block";
+                    menu.style.display = "block";
+
+                    // untoggle animation
+                    menuImg.style.transform = "rotateY(0deg)";
+                    menuImg.style.width = "80px";
+                    menuImg.style.transition = "0.3s";
+
+                }, 200);
+
+            } else {
+
+                // btn animation
+                closeMenuImg.style.transform = "rotateZ(-180deg)";
+                closeMenuImg.style.transition = "0.3s";
+                // menu animation
+                menu.style.marginLeft = "1000px";
+                menu.style.transition = "0.4s";
+
+                setTimeout(() => {
+
+                    menuImg.style.display = "block";
+                    closeMenuImg.style.display = "none";
+
+                    // untoggle animation
+                    closeMenuImg.style.transform = "rotateY(0deg)";
+                    closeMenuImg.style.width = "80px";
+                    closeMenuImg.style.transition = "0.3s";
+
+                }, 200);
+
+            }
+        }
+
+        // close mobile menu after btn click
+        var mobileWorkBtn = document.getElementById(mobile - work - btn);
+        var mobileContactBtn = document.getElementById(mobile - contact - btn);
+
+        function clickMobileMenuItem() {
 
             // btn animation
             closeMenuImg.style.transform = "rotateZ(-180deg)";
@@ -203,39 +302,10 @@
             }, 200);
 
         }
-    }
 
-    // close mobile menu after btn click
-    var mobileWorkBtn = document.getElementById(mobile - work - btn);
-    var mobileContactBtn = document.getElementById(mobile - contact - btn);
+    </script>
 
-    function clickMobileMenuItem() {
 
-        // btn animation
-        closeMenuImg.style.transform = "rotateZ(-180deg)";
-        closeMenuImg.style.transition = "0.3s";
-        // menu animation
-        menu.style.marginLeft = "1000px";
-        menu.style.transition = "0.4s";
-
-        setTimeout(() => {
-
-            menuImg.style.display = "block";
-            closeMenuImg.style.display = "none";
-
-            // untoggle animation
-            closeMenuImg.style.transform = "rotateY(0deg)";
-            closeMenuImg.style.width = "80px";
-            closeMenuImg.style.transition = "0.3s";
-
-        }, 200);
-
-    }
-
-    const myUrl = new URL(window.location.href)
-
-    myUrl.herf= "ahmed-albarea.com";
-
-</script>
+</body>
 
 </html>

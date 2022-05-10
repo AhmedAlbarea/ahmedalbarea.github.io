@@ -225,7 +225,7 @@
 }
 
 .left-line {
-    background-color: #fff;
+    background: #fff;
     width: 46vw;
     height: 4px;
     margin-left: 10px;
@@ -245,7 +245,7 @@
 }
 
 .right-line {
-    background-color: #fff;
+    background: #fff;
     width: 46vw;
     height: 4px;
     margin-right: 10px;
@@ -843,6 +843,7 @@
         box-shadow: 1px 2px 2px #E6E6E6;
         display: block;
         background: #111;
+        border-radius: 20px 5px;
     }
 
     .btn-burger-menu {

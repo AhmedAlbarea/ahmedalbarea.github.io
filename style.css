@@ -182,6 +182,7 @@
 .quote-background {
     width: max-content;
     position: fixed;
+    top: 100px;
     z-index: -1;
     opacity: 0.5;
     transition: 1s;

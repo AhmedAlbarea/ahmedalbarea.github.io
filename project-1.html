@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-barea Project-1 (Help!)</title>
+    <link rel="shortcut icon" href="./pics/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="project-body" id="body">
+
+    <!-- page fixed header -->
+    <header class="header" id="header">
+
+        <!-- logo and name -->
+        <div class="header-left">
+            <a href="index.html" class="logo-container-a"><img class="logo-img" src="./pics/logo.png" alt="my logo"></a>
+
+            <h1 class="myname">AHMED AL-BAREA</h1>
+        </div>
+
+        <div class="header-right">
+            <!-- desktop nav menu -->
+            <a href="index.html" class="nav-item-a">HOME</a>
+            <a href="index.html#work" class="nav-item-a" id="workBtn">WORK</a>
+            <a href="mailto:barea.ab@gmail.com" class="nav-item-a">CONTACT</a>
+            <a href="index.html#about" class="nav-item-a">ABOUT</a>
+
+            <!--btn burger menu  -->
+            <button class="btn-burger-menu" id="btn" onclick="clickMenu()">
+                <img class="menu-img" id="menuImg" src="./pics/open-menu.png" alt="burger menu icon">
+                <img class="close-menu-img" id="closeMenuImg" src="./pics/close-menu.png"
+                    alt="close menu icon"></button>
+        </div>
+    </header>
+
+    <!-- main container -->
+    <div class="main-container-div">
+
+        <!-- mobile menu -->
+        <div class="mobile-menu-container" id="mobile-menu">
+            <a href="index.html" class="nav-item-a-mobile">HOME</a>
+            <a href="index.html#Work" class="nav-item-a-mobile" id="mobile-work-btn" onclick="clickMobileMenuItem()">WORK</a>
+            <a href="mailto:barea.ab@gmail.com" class="nav-item-a-mobile" id="mobile-contact-btn"
+                onclick="clickMobileMenuItem()">CONTACT</a>
+            <a href="index.html#about" class="nav-item-a-mobile" id="mobile-about-btn" onclick="clickMobileMenuItem()">ABOUT</a>
+        </div>
+
+        <!-- project 1 banner -->
+        <div class="banner">
+            <img src="./project-1/banner/bannerBg.png" alt="banner background" class="bannerbg">
+            <img src="./project-1/banner/mobile.png" alt="project banner" class="banner-img">
+            <img src="./project-1/banner/Desktop.png" alt="project banner" class="banner-img" id="desktop-mockup">
+            <img src="./project-1/banner/tablet.png" alt="project banner" class="banner-img">
+        </div>
+
+
+        
+
+
+        <!-- Section project title -->
+        <div class="section-title-container">
+            <div class="left-line"></div>
+            <div class="middle-line">
+                <h2 class="title-text">Help!</h2>
+            </div>
+            <div class="right-line"></div>
+        </div>
+
+        <!-- project intro -->
+        <div class="project-intro-container">
+            <h2 class="project-intro-text">Help! is a responsive website where anyone can learn First Aid procedures or
+                be guided in a real emergency situation.</h2>
+        </div>
+
+        <!-- details container -->
+        <div class="case-container">
+
+            <div class="case-btn-container">
+                <div class="case-btns" id="overview-btn" onclick="clickOverviewBtn()">Project Overview</div>
+                <div class="case-btns" id="story-btn" onclick="clickStoryBtn()">Project Story</div>
+            </div>
+
+            <!-- overview container -->
+            <div class="overview-container" id="overview-container">
+
+                <h2 class="overview-and-story-steps">Persona, Problem statement, and user story.</h2>
+                <img  class="overview-and-story-img" src="./project-1/Persona-sam.jpg" alt="user persona">
+                <img  class="overview-and-story-img" src="./project-1/problem-statement-sam.jpg" alt="problem statement">
+                <img  class="overview-and-story-img" src="./project-1/user-story-sam.jpg" alt="user story">
+
+                <h2 class="overview-and-story-steps">Site map</h2>
+                <img  class="overview-and-story-img" src="./project-1/sitemap.jpg" alt="site map">
+
+                <h2 class="overview-and-story-steps">Wireframes ( paper & digital )</h2>
+                <img  class="overview-and-story-img" src="./project-1/paper-wireframe.jpg" alt="wireframes">
+                <img  class="overview-and-story-img" src="./project-1/digital-wireframe.png" alt="wireframes">
+                <img  class="overview-and-story-img" src="./project-1/digital-wireframes-screens.png" alt="wireframes">
+
+                <h2 class="overview-and-story-steps">Prototypes ( Low-Fidelity )</h2>
+                <img  class="overview-and-story-img" src="./project-1/lo-fi-prototype.png" alt="lo-fi prototypes">
+                <p class="overview-and-story-paragraph">Click <a class="overview-and-story-links" href="https://www.figma.com/proto/Ey1kqsYx2Rp6MEyJ9oMKm9/Help!-for-social-good?node-id=14%3A146&scaling=scale-down&page-id=14%3A144&starting-point-node-id=14%3A146" target="_blank">here</a> to view prototype on Figma</p>
+
+                <h2 class="overview-and-story-steps">Identify patterns and themes</h2>
+                <img  class="overview-and-story-img" src="./project-1/affinity-diagram-2.jpg" alt="affinity diagram">
+
+                
+                <h2 class="overview-and-story-steps">Iteration and Mockups</h2>
+                <video  class="overview-and-story-img" src="./project-1/mockup-mobil.mp4" autoplay muted loop></video>
+                <img  class="overview-and-story-img" src="./project-1/mockup-tablet.png" alt="tablet mockups">
+                <img  class="overview-and-story-img" src="./project-1/mockup-desktop.png" alt="desktop mockups">
+
+                <h2 class="overview-and-story-steps">Prototypes ( High-Fidelity )</h2>
+                <img  class="overview-and-story-img" src="./project-1/hi-fi-prototype.png" alt="hi-fi prototypes">
+                <p class="overview-and-story-paragraph">Click <a class="overview-and-story-links" href="https://www.figma.com/proto/Ey1kqsYx2Rp6MEyJ9oMKm9/Help!-for-social-good?node-id=318%3A146&scaling=scale-down&page-id=0%3A1&starting-point-node-id=318%3A146" target="_blank">here</a> to view prototype on Figma</p>
+
+
+                <div class="divider"></div>
+
+
+                <!-- Thanks -->
+                <h2 class="overview-and-story-steps" style="text-decoration: none;">Thanks &#128578;</h2>
+                <p class="overview-and-story-paragraph">Thank you for your time reviewing my work.
+                    <br>
+                    <br>
+                    For more details, check <a href="#" class="overview-and-story-links">project story</a> or <a class="overview-and-story-links" href="mailto:barea.ab@gmail.com">contact me</a>
+                </p>
+    
+    
+                <div class="divider"></div>
+
+
+            </div>
+
+
+            <!-- story container -->
+            <div class="story-container" id="story-container">
+
+                <h2 class="overview-and-story-steps">Team and roles</h2>
+                <p class="overview-and-story-paragraph">This was a project for social good during my <a class="overview-and-story-links" href="https://coursera.org/share/67a9920cc1781717d8fcaa21999b6abf" target="_blank">Google UX Design Professional Certificate.</a> This means my role was a <span class="highlighted-text">Generalist UX Designer</span> because I do the whole process, research, empathy, sketches, wireframe, mockups, prototypes, tests, and whatever the process requires. 
+                </p>
+
+
+                <h2 class="overview-and-story-steps">Why?</h2>
+                <p class="overview-and-story-paragraph">&#9679; There are many resources for First Aid and CPR, but most of them don't have fast access. 
+                    <br>
+                    &#9679; Many people don't know how to do CPR or First Aid, or they forgot how to do it.
+                    <br>
+                    &#9679; Many people died when there was a chance to save them, and that's because those around them didn't know how to do CPR or First Aid.
+                </p>
+
+
+                <h2 class="overview-and-story-steps">Who?</h2>
+                <p class="overview-and-story-paragraph">It's for social good and it's about First Aid, so it's for everone above the age of 12. 
+                </p>
+
+
+                <h2 class="overview-and-story-steps">Key challenges</h2>
+                <p class="overview-and-story-paragraph">
+                    <span class="highlighted-text">The gap between design and development:</span>
+                    <br>
+                    When I was working on this project, my web development knowledge was 0%. When I started learning web development, I realized how important it is for me as a UX designer.
+                    <br><br>
+                    <span class="highlighted-text">Time constraint:</span>
+                    <br>
+                    There was still a lot to learn and the course fee was a monthly subscription, so I was working as fast as possible &#128517;.
+                </p>
+
+
+                <h2 class="overview-and-story-steps">Toolkit</h2>
+                <div class="toolkit-container">
+                        <img class="toolkit-icons" src="./toolkit-icons/figma-.png" alt="figma icon" title="Figma">
+                        <img class="toolkit-icons" src="./toolkit-icons/miro-logos-.png" alt="Miro icon" title="Miro">
+                        <img class="toolkit-icons" src="./toolkit-icons/coolors-logo-black-bg.png" alt="Coolors icon" title="Coolors">
+                        <img class="toolkit-icons" src="./toolkit-icons/excel-.png" alt="Excel icon" title="Excel">
+                        <img class="toolkit-icons" src="./toolkit-icons/word-.png" alt="Word icon" title="Word">
+                </div>
+
+
+                <h2 class="overview-and-story-steps">Foundational research</h2>
+                <p class="overview-and-story-paragraph">I conducted user interviews, which I then turned into empathy maps to better understand the target
+                    user and their needs.
+                </p>
+                <img  class="overview-and-story-img" src="./project-1/Persona-sam.jpg" alt="user persona">
+                <img  class="overview-and-story-img" src="./project-1/problem-statement-sam.jpg" alt="problem statement">
+                <img  class="overview-and-story-img" src="./project-1/user-story-sam.jpg" alt="user story">
+
+
+                <h2 class="overview-and-story-steps">Initial concepts</h2>
+                <p class="overview-and-story-paragraph">Mapping user's journey revealed how helpful it would be for the user to easily access First Aid and CPR guidance in emergency situation.
+                </p>
+                <img  class="overview-and-story-img" src="./project-1/user-journey-sam.png" alt="user journey">
+                <p class="overview-and-story-paragraph">Storybording
+                </p>
+                <img  class="overview-and-story-img" src="./project-1/Storyboarding-cpr.jpg" alt="storyboarding">
+                <p class="overview-and-story-paragraph">User flow
+                </p>
+                <img  class="overview-and-story-img" src="./project-1/user-flow-cpr.jpg" alt="user flow">
+
+
+                <h2 class="overview-and-story-steps">Competitive audit</h2>
+                <p class="overview-and-story-paragraph">I checked some First Aid & CPR providers and couldn't find one with fast access that could actually help the user in an emergency situation, except for one, but it's not complete. you can check it <a class="overview-and-story-links" href="https://pg-cpr.co.uk/" target="_blank">here</a>
+                </p>
+                <img  class="overview-and-story-img" src="./project-1/competitive-audit-cpr.png" alt="Competitive audit">
+
+
+                <h2 class="overview-and-story-steps">Site map</h2>
+                <p class="overview-and-story-paragraph">The goal was to make a simple information architecture decisions that would improve the speed of access to the guidance. So I tried to make the structure as simple as possible. 
+
+                </p>
+                <img  class="overview-and-story-img" src="./project-1/sitemap.jpg" alt="site map">
+
+
+                <h2 class="overview-and-story-steps">Wireframes</h2>
+                <p class="overview-and-story-paragraph">Taking the time to draft iterations of each screen of the design on paper ensured that the elements that made it to digital wireframes would be well-suited to address user pain points. 
+                </p>
+                <img  class="overview-and-story-img" src="./project-1/crazy-eight-cpr.jpg" alt="crazy eight">
+                <img  class="overview-and-story-img" src="./project-1/paper-wireframe.jpg" alt="paper wireframes">
+
+                <p class="overview-and-story-paragraph">Digital wireframes</p>
+                <img  class="overview-and-story-img" src="./project-1/digital-wireframe.png" alt="Digital wireframes">
+
+                <p class="overview-and-story-paragraph">Screen variety</p>
+                <img  class="overview-and-story-img" src="./project-1/digital-wireframes-screens.png" alt="Screen variety">
+
+
+                <h2 class="overview-and-story-steps">Low fidelity prototype</h2>
+                <p class="overview-and-story-paragraph">I connected all of the screens involved in the primary user flow of accessing, navigating and viewing guidance. 
+                </p>
+                <img  class="overview-and-story-img" src="./project-1/lo-fi-prototype.png" alt="Low fidelity prototype">
+                <p class="overview-and-story-paragraph">Click <a class="overview-and-story-links" href="https://www.figma.com/proto/Ey1kqsYx2Rp6MEyJ9oMKm9/Help!-for-social-good?node-id=14%3A146&scaling=scale-down&page-id=14%3A144&starting-point-node-id=14%3A146" target="_blank">here</a> to view prototype on Figma</p>
+
+
+                <h2 class="overview-and-story-steps">Usability study</h2>
+                <p class="overview-and-story-paragraph">I conducted usability study to set direction and priorities. it uncoverd two findings:
+                    <br>
+                    1- Most of users were confused about the word “apply” on home page.
+                    <br>
+                    2- Some users suggested a call button and an option to share updates about the situation as pictures.
+                </p>
+                <img  class="overview-and-story-img" src="./project-1/usability-study.png" alt="usability study">
+
+
+                <h2 class="overview-and-story-steps">Note-taking and affinity diagram</h2>
+                <p class="overview-and-story-paragraph">During the research, I wrote down all the important notes from users, so later I can use them for Identifying patterns and theme.
+                </p>
+                <img  class="overview-and-story-img" src="./project-1/Note-taking.png" alt="Note-taking">
+                <img  class="overview-and-story-img" src="./project-1/affinity-diagram-1.jpg" alt="affinity diagram">
+                <img  class="overview-and-story-img" src="./project-1/affinity-diagram-2.jpg" alt="affinity diagram">
+
+
+                <h2 class="overview-and-story-steps">Identifying patterns to come up with insights</h2>
+                <img  class="overview-and-story-img" src="./project-1/pattern-Identification.png" alt="Identifying patterns">
+                <p class="overview-and-story-paragraph">Insights</p>
+                <img  class="overview-and-story-img" src="./project-1/insights-Identification.png" alt="Identifying insights">
+
+
+                <h2 class="overview-and-story-steps">Prioritizing insights from most urgent to least urgent</h2>
+                <img  class="overview-and-story-img" src="./project-1/prioritized-Insights.png" alt="Prioritizing insights">
+
+
+                <h2 class="overview-and-story-steps">Refining the design</h2>
+                <p class="overview-and-story-paragraph">I added a call button to help the user call for help based on his location on the map.
+                </p>
+                <img  class="overview-and-story-img" src="./project-1/refining-design-1.png" alt="refining design">
+                <p class="overview-and-story-paragraph">I added a Yes/No question to make it smoother for the user to go through the process.
+                </p>
+                <img  class="overview-and-story-img" src="./project-1/refining-design-2.png" alt="refining design">
+
+
+                <h2 class="overview-and-story-steps">Mockups</h2>
+                <video  class="overview-and-story-img" src="./project-1/mockup-mobil.mp4" autoplay muted loop></video>
+                <img  class="overview-and-story-img" src="./project-1/mockup-tablet.png" alt="tablet mockups">
+                <img  class="overview-and-story-img" src="./project-1/mockup-desktop.png" alt="desktop mockups">
+
+
+                <h2 class="overview-and-story-steps">High fidelity prototype</h2>
+                <p class="overview-and-story-paragraph">Hi-Fi prototype followed the same user flow as the Lo-Fi prototype. It include the design changes made after the usability study. 
+                </p>
+                <img  class="overview-and-story-img" src="./project-1/hi-fi-prototype.png" alt="Hi fidelity prototype">
+                <p class="overview-and-story-paragraph">Click <a class="overview-and-story-links" href="https://www.figma.com/proto/Ey1kqsYx2Rp6MEyJ9oMKm9/Help!-for-social-good?node-id=318%3A146&scaling=scale-down&page-id=0%3A1&starting-point-node-id=318%3A146" target="_blank">here</a> to view prototype on Figma</p>
+
+
+                <h2 class="overview-and-story-steps">Accessibility considerations
+                </h2>
+                <p class="overview-and-story-paragraph">1- I used headings with different sized text for clear visual hierarchy.
+                    <br>
+                    2- I used different colors to help users differentiate between sections.
+                    <br>
+                    3- I used three different ways to tell the same info, read it, listen to it, or watch it.
+                </p>
+                <img  class="overview-and-story-img" src="./project-1/accessibility-considerations.png" alt="Note-taking">
+
+                
+                <div class="divider"></div>
+
+
+                <!-- takeaways -->
+                <h2 class="overview-and-story-steps">Takeaways</h2>
+
+            <div class="takeaways-next-container">
+
+                <div class="takeaways-next-father-1">
+
+                    <div class="takeaways-point-title">
+                        <h2 class="highlighted-text">Impact</h2>
+                    </div>
+
+                    <div class="takeaways-paragraph-container">
+                        <p class="takeaways-paragraph">I did some research to find easy and fast access to CPR, but couldn't find what could actually help me in a serious situation. Most of what I found was very detailed or just for reading purposes, Or maybe a long video.
+                            <br>
+                            That's why I believe that this design will make a difference and help to save people's lives.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="takeaways-next-father-2">
+
+                    <div class="takeaways-point-title">
+                        <h2 class="highlighted-text">What I learned</h2>
+                    </div>
+
+                    <div class="takeaways-paragraph-container">
+                        <p class="takeaways-paragraph">
+                            &diams; When it comes to design for social good, there are always problems to solve, to make people's lives better. 
+                            <br>
+                            &diams; Helping those in need of help makes my conscience very satisfied and I feel that it's the right thing to do.
+                        </p>
+                    </div>                    
+                </div>
+            </div>
+
+
+            <div class="divider"></div>
+
+
+            <!-- Next steps -->
+            <h2 class="overview-and-story-steps">Next steps</h2>
+            <div class="takeaways-next-container">
+
+                <div class="takeaways-next-father-1">
+
+                    <div class="takeaways-point-title">
+                        <h2 class="highlighted-text">Responsive AI </h2>
+                    </div>
+
+                    <div class="takeaways-paragraph-container">
+                        <p class="takeaways-paragraph">Add a responsive AI which will interact with the user to guide him by talking to him.
+                        </p>
+                    </div>                   
+                </div>
+
+                <div class="takeaways-next-father-2">
+
+                    <div class="takeaways-point-title">
+                        <h2 class="highlighted-text">Global medical network</h2>
+                    </div>
+
+                    <div class="takeaways-paragraph-container">
+                        <p class="takeaways-paragraph">Make it a global medical network where everyone can register their info which will make it easy to reach them or contact them in emergencies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="divider"></div>
+
+
+            <!-- Thanks -->
+            <h2 class="overview-and-story-steps" style="text-decoration: none;">Thanks &#128578;</h2>
+            <p class="thanks-paragraph">Thank you for your time reviewing my work.
+                <br>
+                If there is anything you would like to talk about, do not hesitate to <a class="overview-and-story-links" href="mailto:barea.ab@gmail.com">contact me</a>
+            </p>
+
+
+            <div class="divider"></div>
+
+
+            </div>
+        </div>
+
+
+    </div> <!-- end of main container -->
+
+
+
+
+    <!-- footer -->
+    <footer class="footer" id="project-footer">
+
+        <div class="footer-left footer-div">
+            <a href="https://www.linkedin.com/in/ahmed-ali-49a061223?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BLLTN0OodRJSd0G4rEEV5pw%3D%3D"
+                class="linkedin-a"><img class="linkedin-img" src="./pics/linkedin.png" alt="my linkedin"></a>
+        </div>
+        <div class="footer-middle footer-div">
+            <h6 class="copyright">Copyright &copy; Ahmed Al-barea
+            </h6>
+        </div>
+        <div class="footer-right footer-div">
+            <a title="How about some tea!" href="https://paypal.me/AhmedBarea?country.x=C2&locale.x=en_US"
+                class="coffee-a"><img class="coffee-img" src="./pics/coffee.png" alt="buy me a coffee"> </a>
+        </div>
+
+    </footer>
+
+    <!-- go to top btn -->
+    <a href="#" id="toTopBtn-container" title="go to top">
+        <img class="to-top-img" src="./pics/to-top.png" alt="go to top">
+    </a>
+
+
+    <!-- script -->
+    <script src="script.js"></script>
+</body>
+
+</html>

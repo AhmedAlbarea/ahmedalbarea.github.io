@@ -776,6 +776,7 @@
     }
 
 
+
     /* disable hover effect - start */
 
     .project-box:hover h2 {
@@ -816,9 +817,9 @@
     #story-btn:hover{
         color: #e6e6e6;
     }
-
-
+    
     /* disable hover effect - end */
+
 
 
     .header-left {

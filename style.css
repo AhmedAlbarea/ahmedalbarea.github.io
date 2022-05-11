@@ -541,22 +541,24 @@
     background: #000;
     color: #E6E6E6;
     border-bottom: none;
-    border-top: 2px solid #00ff00;
+    border-top: 3px solid #00ff00;
+    border-radius: 20px 5px;
 }
 
 #overview-btn:hover{ /*hover btn */
-    color: #ff5555;
+    color: #f1d302;
 }
 
 #story-btn {
     background: #000;
     color: #E6E6E6;
     border-bottom: none;
-    border-top: 2px solid #ff0000;
+    border-top: 3px solid #ff0000;
+    border-radius: 20px 5px;
 }
 
 #story-btn:hover{ /*hover btn */
-    color: #ff5555;
+    color: #f1d302;
 }
 
 .overview-container {
@@ -760,6 +762,7 @@
 
 
 @media only screen and (max-width: 975px) {
+    
 
     /* hide scrollbar on Firefox */
     html {
@@ -771,6 +774,51 @@
         display: none;
         width: 0px;
     }
+
+
+    /* disable hover effect - start */
+
+    .project-box:hover h2 {
+        display: none;
+    }
+    .project-box:hover h3 {
+        display: none;
+    }
+    .project-box:hover img {
+        opacity: 1;
+    }
+
+    .open-project:hover {
+    color: #e6e6e6;
+    border: 1px solid #FFFFFF;
+    box-shadow: 1px 2px 2px #fff;
+    background-color: #1C2833;
+    opacity: 1;
+    }
+
+    .about-links:hover {
+        border-bottom: none;
+    }
+
+    .overview-and-story-links:hover {
+        border-bottom: none;
+    }
+
+    .resume-btn:hover {
+        color: #e6e6e6;
+        background-color: #000;
+        border: 1px solid #e6e6e6;
+    }
+
+    #overview-btn:hover{
+        color: #e6e6e6;
+    }
+    #story-btn:hover{
+        color: #e6e6e6;
+    }
+
+
+    /* disable hover effect - end */
 
 
     .header-left {
@@ -1006,5 +1054,6 @@
 
 
 }
+
 
 /* @media end */

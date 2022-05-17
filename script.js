@@ -90,6 +90,8 @@ function scroll() {
   }
 }
 
+
+
 //  <!-- project's overview & story animation (containers and buttons) -->
 var overviewBtn = document.getElementById("overview-btn");
 var storyBtn = document.getElementById("story-btn");
@@ -100,11 +102,16 @@ function clickStoryBtn() {
   if ((overviewContainer.style.display = "flex")) {
     overviewContainer.style.display = "none";
     storyContainer.style.display = "flex";
+    storyContainer.style.opacity = "0";
 
-    overviewBtn.style.opacity = "0.1";
-    storyBtn.style.opacity = "0.1";
+    overviewBtn.style.opacity = "0.5";
+    storyBtn.style.opacity = "0.5";
 
     setTimeout(() => {
+      
+      storyContainer.style.transform = "rotateY(360deg)";
+      overviewContainer.style.transform = "rotateY(-360deg)";
+
       storyBtn.style.borderTopColor = "#00ff00";
       overviewBtn.style.borderTopColor = "#ff0000";
 
@@ -117,8 +124,8 @@ function clickStoryBtn() {
       overviewBtn.style.opacity = "1";
       storyBtn.style.opacity = "1";
 
-      overviewContainer.style.transition = "0.3s";
-      storyContainer.style.transition = "0.3s";
+      overviewContainer.style.transition = "0.2s";
+      storyContainer.style.transition = "0.2s";
     }, 200);
   }
 }
@@ -128,10 +135,14 @@ function clickOverviewBtn() {
     overviewContainer.style.display = "flex";
     storyContainer.style.display = "none";
 
-    overviewBtn.style.opacity = "0.1";
-    storyBtn.style.opacity = "0.1";
+    overviewBtn.style.opacity = "0.5";
+    storyBtn.style.opacity = "0.5";
 
     setTimeout(() => {
+      
+      storyContainer.style.transform = "rotateY(-360deg)";
+      overviewContainer.style.transform = "rotateY(360deg)";
+
       storyBtn.style.borderTopColor = "#ff0000";
       overviewBtn.style.borderTopColor = "#00ff00";
 
@@ -141,8 +152,8 @@ function clickOverviewBtn() {
       overviewBtn.style.opacity = "1";
       storyBtn.style.opacity = "1";
 
-      overviewContainer.style.transition = "0.3s";
-      storyContainer.style.transition = "0.3s";
+      overviewContainer.style.transition = "0.2s";
+      storyContainer.style.transition = "0.2s";
     }, 200);
   }
 }

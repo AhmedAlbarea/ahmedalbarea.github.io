@@ -331,7 +331,24 @@
     border-radius: 20px 5px ;
 }
 
-/* hover effect for project box  */
+#share-project-btn {
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    box-shadow:  0px 2px  #00ff00;
+    width: 35px;
+    height: 35px;
+    background: #000;
+    opacity: 0.5;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#share-project-btn:hover {
+    opacity: 0.7;
+}
+
+/* hover effect for project box start */
 
 .project-box:hover h2 {
     opacity: 1;
@@ -464,7 +481,7 @@
 }
 
 
-/* project-1 style start */
+/* project-page style start */
 
 .banner {
     width: 100vw;
@@ -761,6 +778,11 @@
 }
 
 
+/* #mockup-video {
+    
+} */
+
+
 @media only screen and (max-width: 975px) {
     
 
@@ -795,6 +817,16 @@
     box-shadow: 1px 2px 2px #fff;
     background-color: #1C2833;
     opacity: 1;
+    }
+
+    #share-project-btn {
+        right: 5px;
+        width: 30px;
+        height: 30px;
+    }
+
+    #share-project-btn:hover {
+        opacity: 0.5;
     }
 
     .about-links:hover {

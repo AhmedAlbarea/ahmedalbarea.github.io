@@ -157,3 +157,11 @@ function clickOverviewBtn() {
     }, 200);
   }
 }
+
+
+// copy current project page link
+var shareProjectBtn = document.getElementById("share-project-btn");
+  function copyCurrentURL() {
+    navigator.clipboard.writeText(window.location.href);
+    alert("Project link copied to clipboard");
+}

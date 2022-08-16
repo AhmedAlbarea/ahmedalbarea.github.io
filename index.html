@@ -33,10 +33,11 @@
 
         <div class="header-right">
             <!-- desktop nav menu -->
-            <a href="index.html" class="nav-item-a" onclick="removeUrlAnchor()">HOME</a>
-            <a href="#work" class="nav-item-a" id="workBtn">WORK</a>
-            <a href="mailto:barea.ab@gmail.com" class="nav-item-a">CONTACT</a>
-            <a href="#about" class="nav-item-a">ABOUT</a>
+            <a href="index.html" class="nav-item-a" id="home-btn-desktop">HOME</a>
+            <a href="#work" class="nav-item-a" id="work-btn-desktop">WORK</a>
+            <a href="#about" class="nav-item-a" id="about-btn-desktop">ABOUT</a>
+            <a href="#contact" class="nav-item-a" id="contact-btn-desktop">CONTACT</a>
+
 
             <!--btn burger menu  -->
             <button class="btn-burger-menu" id="btn" onclick="clickMenu()">
@@ -46,108 +47,118 @@
         </div>
     </header>
 
+
+    <!-- to change home nav button colors on scroll according to sections -->
+    <div class="onscrolldiv" id="onscrolldiv"></div>
+
+
     <!-- main container -->
     <div class="main-container-div">
 
 
         <!-- mobile menu -->
         <div class="mobile-menu-container" id="mobile-menu">
-            <a href="index.html" class="nav-item-a-mobile">HOME</a>
+            <a href="index.html" class="nav-item-a-mobile" id="mobile-home-btn">HOME</a>
+            <!-- no need clickMobileMenuItem for home button because it will reload the page -->
             <a href="#work" class="nav-item-a-mobile" id="mobile-work-btn" onclick="clickMobileMenuItem()">WORK</a>
-            <a href="mailto:barea.ab@gmail.com" class="nav-item-a-mobile" id="mobile-contact-btn"
-                onclick="clickMobileMenuItem()">CONTACT</a>
             <a href="#about" class="nav-item-a-mobile" id="mobile-about-btn" onclick="clickMobileMenuItem()">ABOUT</a>
+            <a href="#contact" class="nav-item-a-mobile" id="mobile-contact-btn"
+                onclick="clickMobileMenuItem()">CONTACT</a>
         </div>
 
-        <!-- quote -->
-        <div class="quote-container">
-            <img class="quote-background" id="quote-background" src="./pics/quote-background.png"
-                alt="quote background">
-            <h1 class="quote">
-                A <span class="quote-highlight">UX Designer</span> and <span class="quote-highlight">Front End
-                    Developer</span>
-                <br>who believes that
-                <br>“ Simplicity is the key to brilliance “.
-            </h1>
-        </div>
 
-        <!-- just to go to work section -->
-        <div class="go-to-section" id="work"></div>
+        <div class="home-section" id="home-section">
 
-        <!-- Section work title -->
-        <div class="section-title-container">
-            <div class="left-line"></div>
-            <div class="middle-line">
-                <h2 class="title-text">WORK</h2>
+            <!-- quote -->
+            <div class="quote-container" id="quote-container">
+                <img class="quote-background" id="quote-background" src="./pics/quote-background.png"
+                    alt="quote background">
+                <h1 class="quote">
+                    A <span class="quote-highlight">UX Designer</span> and <span class="quote-highlight">Front End
+                        Developer</span>
+                    <br>who believes that
+                    <br>“ Simplicity is the key to brilliance “.
+                </h1>
             </div>
-            <div class="right-line"></div>
-        </div>
+        </div> <!-- end of home section -->
 
 
-        <!-- <span class="temporary-span">
-            So far only the first project is complete. I'm working on the others. thank you for your understanding
-        </span> -->
+        <div class="work-section" id="work-section">
 
+            <!-- just to go to work section -->
+            <div class="go-to-section" id="work"></div>
 
-        <!-- first two projects layout -->
-        <div class="projecs-layout-container">
-            <!-- projects 1 box -->
-            <a href="./project-help-cpr.html" class="project-box">
-                <img class="project-img" src="./projects-list/project-help-box.png" alt="">
-                <h2 class="project-title">HELP-CPR
-                </h2>
-                <h3 class="project-summary">HELP-CPR is a responsive website where anyone can learn first aid procedures
-                    or
-                    be guided in a real emergency situation.
-                </h3>
-                <span class="open-project">see more</span>
-            </a>
-
-            <!-- projects 2 box -->
-            <a href="./project-my-logo.html" class="project-box">
-                <img class="project-img" src="./projects-list/project-logo-box.png" alt="">
-                <h2 class="project-title">My Logo
-                </h2>
-                <h3 class="project-summary">This is the story of how I designed my logo for my portfolio.
-                </h3>
-                <span class="open-project">see more</span>
-            </a>
-        </div>
+            <!-- Section work title -->
+            <div class="section-title-container">
+                <div class="left-line"></div>
+                <div class="middle-line">
+                    <h2 class="title-text">WORK</h2>
+                </div>
+                <div class="right-line"></div>
+            </div>
 
 
 
-        <!-- second two projects layout -->
-        <div class="projecs-layout-container">
-            <!-- projects 3 box -->
-            <a href="#work" class="project-box">
-                <img class="project-img" src="./projects-list/project-portfolio-box.png" alt="">
-                <h2 class="project-title">My portfolio</h2>
-                <h3 class="project-summary">
-                    Project is in progress
-                    <br>
-                    This is the story of how I developed my portfolio from scratch.
-                </h3>
-                <span class="open-project">see more</span>
-            </a>
+            <!-- first two projects layout -->
+            <div class="projecs-layout-container">
+                <!-- projects 1 box -->
+                <a href="./project-help-cpr.html" class="project-box">
+                    <img class="project-img" src="./projects-list/project-help-box.png" alt="">
+                    <h2 class="project-title">HELP-CPR
+                    </h2>
+                    <h3 class="project-summary">HELP-CPR is a responsive website where anyone can learn first aid
+                        procedures
+                        or
+                        be guided in a real emergency situation.
+                    </h3>
+                    <span class="open-project">see more</span>
+                </a>
 
-            <!-- projects 4 box -->
-            <a href="#work" class="project-box">
-                <img class="project-img" src="./projects-list/project-new-box.png" alt="">
-                <h2 class="project-title">New Project coming soon</h2>
-                <h3 class="project-summary">
-                </h3>
-                <span class="open-project">see more</span>
-            </a>
-        </div>
+                <!-- projects 2 box -->
+                <a href="./project-my-logo.html" class="project-box">
+                    <img class="project-img" src="./projects-list/project-logo-box.png" alt="">
+                    <h2 class="project-title">My Logo
+                    </h2>
+                    <h3 class="project-summary">This is the story of how I designed my logo for my portfolio.
+                    </h3>
+                    <span class="open-project">see more</span>
+                </a>
+            </div>
 
-        <!-- 
+
+
+            <!-- second two projects layout -->
+            <div class="projecs-layout-container">
+                <!-- projects 3 box -->
+                <a href="#work" class="project-box">
+                    <img class="project-img" src="./projects-list/project-portfolio-box.png" alt="">
+                    <h2 class="project-title">My portfolio (in progress)</h2>
+                    <h3 class="project-summary">
+                        Project is in progress
+                        <br>
+                        This is the story of how I developed my portfolio from scratch.
+                    </h3>
+                    <span class="open-project">see more</span>
+                </a>
+
+                <!-- projects 4 box -->
+                <a href="#work" class="project-box">
+                    <img class="project-img" src="./projects-list/project-new-box.png" alt="">
+                    <h2 class="project-title">New Project coming soon</h2>
+                    <h3 class="project-summary">
+                    </h3>
+                    <span class="open-project">see more</span>
+                </a>
+            </div>
+
+            <!-- 
         To do the next row for the next two projects , 
         you must copy  <div class="projecs-layout-container"> and everything inside it
         then rename things and use them for next projects,
         - dont forget thet they have some general style like img width, so don't miss it up. 
      -->
 
-
+        </div> <!-- End of work section -->
 
     </div> <!-- End of main container -->
 
@@ -156,94 +167,143 @@
     <div class="divider-before"></div>
 
 
+    <div class="about-section" id="about-section">
 
-    <!-- just to  go to about section -->
-    <div class="go-to-section" id="about"></div>
+        <!-- just to  go to about section -->
+        <div class="go-to-section" id="about"></div>
 
-    <!-- Section About title -->
-    <div class="section-title-container">
-        <div class="left-line"></div>
-        <div class="middle-line">
-            <h2 class="title-text">About Me &#129312;</h2>
+        <!-- Section About title -->
+        <div class="section-title-container">
+            <div class="left-line"></div>
+            <div class="middle-line">
+                <h2 class="title-text">About Me &#129312;</h2>
+            </div>
+            <div class="right-line"></div>
         </div>
-        <div class="right-line"></div>
-    </div>
 
-    <!-- About container  -->
-    <div class="about-container">
-        <div class="about-pic-welcome-container">
-            <img class="my-pic" src="./pics/my-picture.jpg" alt="my personal picture">
-            <h2 class="about-welcome">
-                Hi, pleased to meet you &#x1F60A;
+        <!-- About container  -->
+        <div class="about-container">
+            <div class="about-pic-welcome-container">
+                <img class="my-pic" src="./pics/my-picture.jpg" alt="my personal picture">
+                <h2 class="about-welcome">
+                    Hi, pleased to meet you &#x1F60A;
+                    <br>
+                    I'M AHMED.
+                    <br>
+                    A <a class="about-links" href="https://coursera.org/share/67a9920cc1781717d8fcaa21999b6abf"
+                        target="_blank">Professional UX Designer</a> and intermediate <span
+                        class="highlighted-text">Front-End Web Developer.</span>
+                </h2>
+            </div>
+
+            <h4 class="about-details">
+                &bull; I believe that simplicity is the key to creativity. but I also know that to make something
+                creatively
+                simple, there is some complex and hard work to be done.
+
                 <br>
-                I'M AHMED.
+                <br>&bull; Making/Designing something useful, solving problems, or fixing things, makes me feel
+                satisfied
+                and happy. That's why I become a designer & a developer.
+
                 <br>
-                A <a class="about-links" href="https://coursera.org/share/67a9920cc1781717d8fcaa21999b6abf"
-                    target="_blank">Professional UX Designer</a> and intermediate <span
-                    class="highlighted-text">Front-End Web Developer.</span>
-            </h2>
-        </div>
+                <br>&bull; I am an easygoing and hardworking person with good communication skills. A team player who
+                likes
+                to share and exchange ideas for better outcomes. I'm always thirsty for knowledge and constantly moving
+                toward the next level.
 
-        <h4 class="about-details">
-            &bull; I believe that simplicity is the key to creativity. but I also know that to make something creatively
-            simple, there is some complex and hard work to be done.
-
+                <br>
+                <br>&bull; I also have experience in Management ( 4 years ) and Teaching ( 5 years ). If you'd like to
+                know more, please <a class="about-links" href="#contact">contact me</a>
+            </h4>
             <br>
-            <br>&bull; Making/Designing something useful, solving problems, or fixing things, makes me feel satisfied
-            and happy. That's why I become a designer & a developer.
-
             <br>
-            <br>&bull; I am an easygoing and hardworking person with good communication skills. A team player who likes
-            to share and exchange ideas for better outcomes. I'm always thirsty for knowledge and always try to reach
-            the next level.
-
-            <br>
-            <br>&bull; I also have experience in Management ( 4 years ) and Teaching ( 5 years ). If you would like to
-            know more, please <a class="about-links" href="mailto:barea.ab@gmail.com">contact me</a>
-        </h4>
-        <br>
-        <br>
-    </div>
-
-    <!-- skills section -->
-    <section class="my-skills-section">
-        <h2 class="my-skills-title">Some Of My Skills</h2>
-
-        <div class="skills-grid">
-            <img class="skills-icons" src="./toolkit-icons/figma-.png" alt="figma icon" title="Figma">
-            <img class="skills-icons" src="./toolkit-icons/adobe-xd.png" alt="Adobe XD icon" title="Adobe XD">
-            <img class="skills-icons" src="./toolkit-icons/adobe-illustrator.png" alt="Adobe illustrator icon"
-                title="Adobe illustrator">
-            <img class="skills-icons" src="./toolkit-icons/photoshop-.png" alt="Photoshop icon" title="Photoshop">
-
         </div>
-        <!-- the row with three items has margin in the HTML code -->
-        <div class="skills-grid">
-            <img class="skills-icons" src="./toolkit-icons/html-5-.png" alt="HTML icon" title="HTML">
-            <!-- <img class="skills-icons" src="./toolkit-icons/css3-.png" alt="CSS icon" title="CSS" style="margin-left: 50px;"> -->
-            <img class="skills-icons" src="./toolkit-icons/css3-.png" alt="CSS icon" title="CSS">
-            <img class="skills-icons" src="./toolkit-icons/javascript-.png" alt="javascript icon" title="javascript">
-            <!-- <img class="skills-icons" src="./toolkit-icons/miro-logos-.png" alt="Miro icon" title="Miro" style="margin-right: 50px;"> -->
-            <img class="skills-icons" src="./toolkit-icons/miro-logos-.png" alt="Miro icon" title="Miro">
+
+        <!-- skills section -->
+        <section class="my-skills-section">
+            <h2 class="my-skills-title">Some Of My Skills</h2>
+
+            <div class="skills-grid">
+                <div class="skill-icon-container"><img class="skills-icons" src="./toolkit-icons/figma-.png"
+                        alt="figma icon" title="Figma"></div>
+                <div class="skill-icon-container"><img class="skills-icons" src="./toolkit-icons/adobe-xd.png"
+                        alt="Adobe XD icon" title="Adobe XD"></div>
+                <div class="skill-icon-container"><img class="skills-icons" src="./toolkit-icons/adobe-illustrator.png"
+                        alt="Adobe illustrator icon" title="Adobe illustrator"></div>
+                <div class="skill-icon-container"><img class="skills-icons" src="./toolkit-icons/photoshop-.png"
+                        alt="Photoshop icon" title="Photoshop"></div>
+                <div class="skill-icon-container"><img class="skills-icons" src="./toolkit-icons/html-5-.png"
+                        alt="HTML icon" title="HTML"> </div>
+                <div class="skill-icon-container"><img class="skills-icons" src="./toolkit-icons/css3-.png"
+                        alt="CSS icon" title="CSS"></div>
+                <div class="skill-icon-container"><img class="skills-icons" src="./toolkit-icons/javascript-.png"
+                        alt="javascript icon" title="javascript"> </div>
+                <div class="skill-icon-container"><img class="skills-icons" src="./toolkit-icons/miro-logos-.png"
+                        alt="Miro icon" title="Miro"></div>
+                <div class="skill-icon-container"><img class="skills-icons"
+                        src="./toolkit-icons/coolors-logo-black-bg.png" alt="coolors icon" title="Coolors"></div>
+                <div class="skill-icon-container"><img class="skills-icons" src="./toolkit-icons/google-doc.png"
+                        alt="Google doc icon" title="Google doc"></div>
+                <div class="skill-icon-container"><img class="skills-icons"
+                        src="./toolkit-icons/visual-studio-code-.png" alt="visual studio code icon"
+                        title="visual studio code"></div>
+                <div class="skill-icon-container"><img class="skills-icons" src="./toolkit-icons/ms-office.png"
+                        alt="Ms office icon" title="Ms office"></div>
+            </div>
+        </section>
+
+    </div> <!-- end of about section -->
+
+
+    <div class="divider-before"></div>
+
+
+    <div class="contact-section" id="contact-section">
+
+        <!-- just to  go to contact section -->
+        <div class="go-to-section" id="contact"></div>
+
+        <!-- Section contact title -->
+        <div class="section-title-container">
+            <div class="left-line"></div>
+            <div class="middle-line">
+                <h2 class="title-text">Contact Me</h2>
+            </div>
+            <div class="right-line"></div>
         </div>
-        <div class="skills-grid">
-            <img class="skills-icons" src="./toolkit-icons/coolors-logo-white-bg.png" alt="coolors icon"
-                title="Coolors">
-            <img class="skills-icons" src="./toolkit-icons/google-doc.png" alt="Google doc icon" title="Google doc">
-            <img class="skills-icons" src="./toolkit-icons/visual-studio-code-.png" alt="visual studio code icon"
-                title="visual studio code">
-            <img class="skills-icons" src="./toolkit-icons/ms-office.png" alt="Ms office icon" title="Ms office">
+
+
+        <!-- contact form section -->
+        <div class="contact-form-section">
+            <div class="contact-form-container">
+                <div class="contact-img-container">
+                    <img src="./pics/contact-form-pic.png" alt="contact form picture" class="contact-img">
+                    <p class="contact-quote">Thanks for contacting me &#x1F60A; </p>
+                </div>
+
+                <form action="https://getform.io/f/b31699da-453b-48bc-a9fc-6e61442fc037" method="post"
+                    class="contact-form" id="form" target="_blank">
+                    <input type="text" name="name" placeholder="Name" id="contact-name" required maxlength="20">
+                    <input type="email" name="email" placeholder="Email" id="contact-email" required maxlength="50">
+                    <textarea name="message" cols="30" rows="10" placeholder="Write somthing please"
+                        id="contact-message" required maxlength="2000"></textarea>
+                    <button type="submit" class="contact-submit-btn" id="contact-btn"
+                        onclick="clearMessage()">Submit</button>
+                </form>
+
+            </div>
         </div>
-    </section>
+
+    </div> <!-- end of contact section -->
+
 
 
     <!-- footer -->
     <footer class="footer" id="index-footer">
 
         <div class="footer-left footer-div">
-            <a class="linkedin-a"
-                href="https://www.linkedin.com/in/ahmed-ali-49a061223?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BLLTN0OodRJSd0G4rEEV5pw%3D%3D"
-                target="_blank">
+            <a class="linkedin-a" href="https://www.linkedin.com/in/ahmed-al-barea-49a061223/" target="_blank">
                 <img class="linkedin-img" src="./pics/linkedin.png" alt="my linkedin"></a>
         </div>
         <div class="footer-middle footer-div">

@@ -25,10 +25,11 @@
 
         <div class="header-right">
             <!-- desktop nav menu -->
-            <a href="index.html" class="nav-item-a">HOME</a>
-            <a href="index.html#work" class="nav-item-a" id="workBtn">WORK</a>
-            <a href="mailto:barea.ab@gmail.com" class="nav-item-a">CONTACT</a>
-            <a href="index.html#about" class="nav-item-a">ABOUT</a>
+            <a href="index.html" class="nav-item-a" id="home-btn-desktop">HOME</a>
+            <a href="index.html#/work" class="nav-item-a" id="work-btn-desktop">WORK</a>
+            <a href="index.html#/about" class="nav-item-a" id="about-btn-desktop">ABOUT</a>
+            <a href="index.html#/contact" class="nav-item-a" id="contact-btn-desktop">CONTACT</a>
+
 
             <!--btn burger menu  -->
             <button class="btn-burger-menu" id="btn" onclick="clickMenu()">
@@ -43,13 +44,14 @@
 
         <!-- mobile menu -->
         <div class="mobile-menu-container" id="mobile-menu">
-            <a href="index.html" class="nav-item-a-mobile">HOME</a>
-            <a href="index.html#Work" class="nav-item-a-mobile" id="mobile-work-btn"
+            <a href="index.html" class="nav-item-a-mobile" id="mobile-home-btn">HOME</a>
+            <!-- no need clickMobileMenuItem for home button because it will reload the page -->
+            <a href="index.html#/work" class="nav-item-a-mobile" id="mobile-work-btn"
                 onclick="clickMobileMenuItem()">WORK</a>
-            <a href="mailto:barea.ab@gmail.com" class="nav-item-a-mobile" id="mobile-contact-btn"
-                onclick="clickMobileMenuItem()">CONTACT</a>
-            <a href="index.html#about" class="nav-item-a-mobile" id="mobile-about-btn"
+            <a href="index.html#/about" class="nav-item-a-mobile" id="mobile-about-btn"
                 onclick="clickMobileMenuItem()">ABOUT</a>
+            <a href="index.html#/contact" class="nav-item-a-mobile" id="mobile-contact-btn"
+                onclick="clickMobileMenuItem()">CONTACT</a>
         </div>
 
         <!-- project banner -->
@@ -62,8 +64,6 @@
             <img src="./pics/share.png" alt="share project" title="share project" onclick="copyCurrentURL()"
                 id="share-project-btn">
         </div>
-
-
 
 
 
@@ -86,7 +86,7 @@
 
 
         <!-- just to go to story buttons  -->
-        <div class="go-to-section" id="overview-&-stoy-section-cpr"></div>
+        <div class="go-to-section" id="overview-&-story-section-cpr"></div>
 
         <!-- story and overview Main container -->
         <div class="case-container">
@@ -101,7 +101,8 @@
 
                 <h2 class="overview-and-story-steps">Persona, Problem statement, and user story.</h2>
                 <img class="overview-and-story-img" src="./project-help/persona-sam.jpg" alt="user persona">
-                <img class="overview-and-story-img" src="./project-help/problem-statement-sam.jpg" alt="problem statement">
+                <img class="overview-and-story-img" src="./project-help/problem-statement-sam.jpg"
+                    alt="problem statement">
                 <img class="overview-and-story-img" src="./project-help/user-story-sam.jpg" alt="user story">
 
                 <h2 class="overview-and-story-steps">Site map</h2>
@@ -110,7 +111,8 @@
                 <h2 class="overview-and-story-steps">Wireframes ( paper & digital )</h2>
                 <img class="overview-and-story-img" src="./project-help/paper-wireframe.jpg" alt="wireframes">
                 <img class="overview-and-story-img" src="./project-help/digital-wireframe.png" alt="wireframes">
-                <img class="overview-and-story-img" src="./project-help/digital-wireframes-screens.png" alt="wireframes">
+                <img class="overview-and-story-img" src="./project-help/digital-wireframes-screens.png"
+                    alt="wireframes">
 
                 <h2 class="overview-and-story-steps">Prototypes ( Low-Fidelity )</h2>
                 <img class="overview-and-story-img" src="./project-help/lo-fi-prototype.png" alt="lo-fi prototypes">
@@ -123,7 +125,8 @@
 
 
                 <h2 class="overview-and-story-steps">Iteration and Mockups</h2>
-                <video class="overview-and-story-img" src="./project-help/mockup-mobile.mp4" autoplay muted loop></video>
+                <video class="overview-and-story-img" src="./project-help/mockup-mobile.mp4" autoplay muted
+                    loop></video>
                 <img class="overview-and-story-img" src="./project-help/mockup-tablet.png" alt="tablet mockups">
                 <img class="overview-and-story-img" src="./project-help/mockup-desktop.png" alt="desktop mockups">
 
@@ -143,8 +146,8 @@
                 <p class="overview-and-story-paragraph">Thank you for your time reviewing my work.
                     <br>
                     <br>
-                    For more details, check <a href="#overview-&-stoy-section-cpr" class="overview-and-story-links">project
-                        story</a> or <a class="overview-and-story-links" href="mailto:barea.ab@gmail.com">contact me</a>
+                    For more, check <a href="#overview-&-story-section-cpr" class="overview-and-story-links">project
+                        story</a> or <a class="overview-and-story-links" href="index.html#/contact">contact me</a>
                 </p>
 
 
@@ -215,7 +218,8 @@
                     user and their needs.
                 </p>
                 <img class="overview-and-story-img" src="./project-help/persona-sam.jpg" alt="user persona">
-                <img class="overview-and-story-img" src="./project-help/problem-statement-sam.jpg" alt="problem statement">
+                <img class="overview-and-story-img" src="./project-help/problem-statement-sam.jpg"
+                    alt="problem statement">
                 <img class="overview-and-story-img" src="./project-help/user-story-sam.jpg" alt="user story">
 
 
@@ -238,7 +242,8 @@
                     it's not complete. you can check it <a class="overview-and-story-links" href="https://pg-cpr.co.uk/"
                         target="_blank">here</a>
                 </p>
-                <img class="overview-and-story-img" src="./project-help/competitive-audit-cpr.png" alt="Competitive audit">
+                <img class="overview-and-story-img" src="./project-help/competitive-audit-cpr.png"
+                    alt="Competitive audit">
 
 
                 <h2 class="overview-and-story-steps">Site map</h2>
@@ -270,7 +275,8 @@
                 <p class="overview-and-story-paragraph">I connected all of the screens involved in the primary user flow
                     of accessing, navigating and viewing guidance.
                 </p>
-                <img class="overview-and-story-img" src="./project-help/lo-fi-prototype.png" alt="Low fidelity prototype">
+                <img class="overview-and-story-img" src="./project-help/lo-fi-prototype.png"
+                    alt="Low fidelity prototype">
                 <p class="overview-and-story-paragraph">Click <a class="overview-and-story-links"
                         href="https://www.figma.com/proto/Ey1kqsYx2Rp6MEyJ9oMKm9/Help!-for-social-good?node-id=14%3A146&scaling=scale-down&page-id=14%3A144&starting-point-node-id=14%3A146"
                         target="_blank">here</a> to view prototype on Figma</p>
@@ -322,7 +328,8 @@
 
 
                 <h2 class="overview-and-story-steps">Mockups</h2>
-                <video class="overview-and-story-img" src="./project-help/mockup-mobile.mp4" autoplay muted loop></video>
+                <video class="overview-and-story-img" src="./project-help/mockup-mobile.mp4" autoplay muted
+                    loop></video>
                 <img class="overview-and-story-img" src="./project-help/mockup-tablet.png" alt="tablet mockups">
                 <img class="overview-and-story-img" src="./project-help/mockup-desktop.png" alt="desktop mockups">
 
@@ -331,7 +338,8 @@
                 <p class="overview-and-story-paragraph">Hi-Fi prototype followed the same user flow as the Lo-Fi
                     prototype. It include the design changes made after the usability study.
                 </p>
-                <img class="overview-and-story-img" src="./project-help/hi-fi-prototype.png" alt="Hi fidelity prototype">
+                <img class="overview-and-story-img" src="./project-help/hi-fi-prototype.png"
+                    alt="Hi fidelity prototype">
                 <p class="overview-and-story-paragraph">Click <a class="overview-and-story-links"
                         href="https://www.figma.com/proto/Ey1kqsYx2Rp6MEyJ9oMKm9/Help!-for-social-good?node-id=318%3A146&scaling=scale-down&page-id=0%3A1&starting-point-node-id=318%3A146"
                         target="_blank">here</a> to view prototype on Figma</p>
@@ -438,7 +446,7 @@
                 <p class="thanks-paragraph">Thank you for your time reviewing my work.
                     <br>
                     If there is anything you would like to talk about, do not hesitate to <a
-                        class="overview-and-story-links" href="mailto:barea.ab@gmail.com">contact me</a>
+                        class="overview-and-story-links" href="index.html#/contact">contact me</a>
                 </p>
 
 
@@ -458,8 +466,8 @@
     <footer class="footer" id="project-footer">
 
         <div class="footer-left footer-div">
-            <a href="https://www.linkedin.com/in/ahmed-ali-49a061223?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BLLTN0OodRJSd0G4rEEV5pw%3D%3D"
-                class="linkedin-a"><img class="linkedin-img" src="./pics/linkedin.png" alt="my linkedin"></a>
+            <a href="https://www.linkedin.com/in/ahmed-al-barea-49a061223/" class="linkedin-a"><img class="linkedin-img"
+                    src="./pics/linkedin.png" alt="my linkedin"></a>
         </div>
         <div class="footer-middle footer-div">
             <h6 class="copyright">Copyright &copy; Ahmed Al-barea
@@ -480,6 +488,7 @@
 
     <!-- script -->
     <script src="script.js"></script>
+
 </body>
 
 </html>

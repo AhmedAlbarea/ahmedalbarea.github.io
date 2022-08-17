@@ -181,11 +181,18 @@
 
 .quote-background {
     width: max-content;
+    object-fit: cover;
     position: fixed;
     top: 100px;
     z-index: -1;
-    opacity: 0.3;
+    opacity: 0.05;
     transition: 1s;
+}
+
+/* to change home section according to jobs names  */
+#quote-background2,
+#quote-background3 {
+    opacity: 0;
 }
 
 .quote {
@@ -201,20 +208,10 @@
     color: #f1d302;
 }
 
-.home-section {
-    /* border: 5px solid yellow; */
-}
-
-.work-section {
-    /* border: 5px solid yellow; */
-}
-
-.about-section {
-    /* border: 5px solid yellow; */
-}
-
-.contact-section {
-    /* border: 5px solid yellow; */
+/* it's the same quote highlight, but this id for js code */
+#designer-developer {
+    opacity: 0;
+    transition: 1.5s;
 }
 
 /* go to work div */
@@ -303,6 +300,9 @@
 
 .project-title {
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     top: 5%;
     bottom: auto;
     word-wrap: break-word;
@@ -1288,9 +1288,9 @@ button {
         background: rgb(0, 17, 0, 1);
         width: 100%;
         height: fit-content;
-        padding: 5px 0;
+        padding: 20px 0;
         border-radius: 20px 5px;
-        top: 10%;
+        top: 0;
     }
 
 

@@ -22,6 +22,49 @@ if (pageUrl.includes("#/contact")) {
 }
 
 
+// quote jobs slider every some seconds for text and backgrounds
+if (document.title == "Ahmed Al-barea portfolio") {
+
+  var designerDeveloper = document.getElementById("designer-developer");
+  var jobsArr = ["UX Designer", "Logo Designer", "Front-End Developer"];
+  var currentJob = 0;
+  designerDeveloper.style.opacity = "1";
+  designerDeveloper.innerHTML = jobsArr[currentJob];
+
+  function loop() {
+    setTimeout(() => {
+      designerDeveloper.style.opacity = "0";
+    }, 2000);
+    setTimeout(() => {
+      currentJob++;
+      designerDeveloper.style.opacity = "1";
+      designerDeveloper.innerHTML = jobsArr[currentJob];
+
+      // this switch to change home section according to jobs names
+      switch (currentJob) {
+        case 1:
+          document.getElementById("quote-background").style.opacity = "0";
+          document.getElementById("quote-background2").style.opacity = "0.05";
+          break;
+        case 2:
+          document.getElementById("quote-background2").style.opacity = "0";
+          document.getElementById("quote-background3").style.opacity = "0.05";
+          break;
+
+        case 0:
+          document.getElementById("quote-background").style.opacity = "0.05";
+          document.getElementById("quote-background2").style.opacity = "0";
+          document.getElementById("quote-background3").style.opacity = "0";
+          break;
+      }
+
+      if (currentJob == 2) {
+        currentJob = -1;
+      } loop()
+    }, 4000);
+  } loop();
+}
+
 
 //  to change home nav button colors on scroll according to sections
 let title = document.title;
@@ -225,25 +268,17 @@ function clickMobileMenuItem() {
 
 
 
-// To show To Top button on scroll
+// To show ToTop button on scroll and change home section backround opacity
 let toTopBtnContainer = document.getElementById("toTopBtn-container");
-let quoteBackground = document.getElementById("quote-background");
 
 window.addEventListener("scroll", scrollForTopBtn);
 
 function scrollForTopBtn() {
   if (window.scrollY >= 500) {
     toTopBtnContainer.style.top = "96vh";
-    if (document.URL.includes("index.html")) {
-      quoteBackground.style.opacity = "0.05";
-    }
   } else {
     toTopBtnContainer.style.top = "110vh";
-    if (document.URL.includes("index.html")) {
-      quoteBackground.style.opacity = "0.3";
-    }
   }
-
 }
 
 

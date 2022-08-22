@@ -26,12 +26,12 @@ if (pageUrl.includes("#/contact")) {
 if (document.title == "Ahmed Al-barea portfolio") {
 
   var designerDeveloper = document.getElementById("designer-developer");
-  var jobsArr = ["UX Designer", "Logo Designer", "Front-End Developer"];
+  var jobsArr = [".......","UX Designer", "Logo Designer", "Front-End Developer"];
   var currentJob = 0;
   designerDeveloper.style.opacity = "1";
   designerDeveloper.innerHTML = jobsArr[currentJob];
 
-  function loop() {
+  function loopQuoteTitles() {
     setTimeout(() => {
       designerDeveloper.style.opacity = "0";
     }, 2000);
@@ -39,60 +39,73 @@ if (document.title == "Ahmed Al-barea portfolio") {
       currentJob++;
       designerDeveloper.style.opacity = "1";
       designerDeveloper.innerHTML = jobsArr[currentJob];
-
-      // this switch to change home section according to jobs names
+      // this switch is to change home section according to jobs names
       switch (currentJob) {
         case 1:
+          document.getElementById("quote-background0").style.opacity = "0";
+          document.getElementById("quote-background").style.opacity = "0.05";
+          break;
+        case 2:
           document.getElementById("quote-background").style.opacity = "0";
           document.getElementById("quote-background2").style.opacity = "0.05";
           break;
-        case 2:
+        case 3:
           document.getElementById("quote-background2").style.opacity = "0";
           document.getElementById("quote-background3").style.opacity = "0.05";
           break;
-
         case 0:
-          document.getElementById("quote-background").style.opacity = "0.05";
-          document.getElementById("quote-background2").style.opacity = "0";
+          document.getElementById("quote-background0").style.opacity = "0.05";
           document.getElementById("quote-background3").style.opacity = "0";
           break;
       }
 
-      if (currentJob == 2) {
+      if (currentJob == 3) {
         currentJob = -1;
-      } loop()
+      } loopQuoteTitles()
     }, 4000);
-  } loop();
+  } loopQuoteTitles();
 }
 
 
 //  to change home nav button colors on scroll according to sections
 let title = document.title;
 
-if (title !== "Ahmed Al-barea portfolio") {
-  //  if not on home page, highlight only work button
-  document.getElementById("home-btn-desktop").style.boxShadow = "1px 2px 2px #ff5555"; // default color
-  document.getElementById("work-btn-desktop").style.boxShadow = "1px 2px 2px #00ff00"; // active color
-  document.getElementById("contact-btn-desktop").style.boxShadow = "1px 2px 2px #ff5555"; // default color
-  document.getElementById("about-btn-desktop").style.boxShadow = "1px 2px 2px #ff5555"; // default color
-  // mobile
-  document.getElementById("mobile-home-btn").style.boxShadow = "1px 2px 2px #ff5555"; // default color
-  document.getElementById("mobile-work-btn").style.boxShadow = "1px 2px 2px #00ff00"; // active color
-  document.getElementById("mobile-contact-btn").style.boxShadow = "1px 2px 2px #ff5555"; // default color
-  document.getElementById("mobile-about-btn").style.boxShadow = "1px 2px 2px #ff5555"; // default color
+// all buttons 
+let homeBtn = document.getElementById("home-btn-desktop");
+let workBtn = document.getElementById("work-btn-desktop");
+let contactBtn = document.getElementById("contact-btn-desktop");
+let aboutBtn = document.getElementById("about-btn-desktop");
+// mobile
+let homeBtnMob = document.getElementById("mobile-home-btn");
+let workBtnMob = document.getElementById("mobile-work-btn");
+let contactBtnMob = document.getElementById("mobile-contact-btn");
+let aboutBtnMob = document.getElementById("mobile-about-btn");
+
+function activeBtn(item, item2) {
+  item.style.boxShadow = "1px 2px 2px #00ff00"; // active color
+  item2.style.boxShadow = "1px 2px 2px #00ff00"; // active color
+}
+function defaultBtn(item, item2) {
+  item.style.boxShadow = "1px 2px 2px #ff5555"; // default color
+  item2.style.boxShadow = "1px 2px 2px #ff5555"; // default color
 }
 
+if (title !== "Ahmed Al-barea portfolio") {
+  //  if not on home page, highlight only work button
+  activeBtn(workBtn, workBtnMob);
+}
+
+// if on home page highlight the following 
 if (title == "Ahmed Al-barea portfolio") {
 
   // home button default color onload
-  document.getElementById("home-btn-desktop").style.boxShadow = "1px 2px 2px #00ff00";
-  // mobile
-  document.getElementById("mobile-home-btn").style.boxShadow = "1px 2px 2px #00ff00";
+ activeBtn(homeBtn, homeBtnMob);
 
-  // sections 
+  // get sections 
   let homeSect = document.getElementById("home-section");
   let workSect = document.getElementById("work-section");
   let aboutSect = document.getElementById("about-section");
+  let skillSect = document.getElementById("skills-section");
   let contactSect = document.getElementById("contact-section");
 
   // fixed div for onscrolling detection
@@ -105,18 +118,21 @@ if (title == "Ahmed Al-barea portfolio") {
     // onscrolling div top and bottom 
     let onscrolldivBottom = onscrolldiv.getBoundingClientRect().bottom;
 
-    // elements tops and bottoms
+    // sections tops and bottoms
     let homeTop = homeSect.getBoundingClientRect().top;
     let homeBottom = homeSect.getBoundingClientRect().bottom;
 
     let workTop = workSect.getBoundingClientRect().top;
     let workBottom = workSect.getBoundingClientRect().bottom;
 
-    let contactTop = contactSect.getBoundingClientRect().top;
-    let contactBottom = contactSect.getBoundingClientRect().bottom;
-
     let aboutTop = aboutSect.getBoundingClientRect().top;
     let aboutBottom = aboutSect.getBoundingClientRect().bottom;
+    
+    let skillsTop = skillSect.getBoundingClientRect().top;
+    let skillsBottom = skillSect.getBoundingClientRect().bottom;
+
+    let contactTop = contactSect.getBoundingClientRect().top;
+    let contactBottom = contactSect.getBoundingClientRect().bottom;
 
 
 
@@ -131,6 +147,9 @@ if (title == "Ahmed Al-barea portfolio") {
     // about
     let aboutTop_ScrolldivBottom = aboutTop - onscrolldivBottom;
     let aboutBottom_ScrolldivBottom = aboutBottom - onscrolldivBottom;
+    // skills
+    let skillsTop_ScrolldivBottom = skillsTop - onscrolldivBottom;
+    let skillsBottom_ScrolldivBottom = skillsBottom - onscrolldivBottom;
     // contact
     let contactTop_ScrolldivBottom = contactTop - onscrolldivBottom;
     let contactBottom_ScrolldivBottom = contactBottom - onscrolldivBottom;
@@ -141,56 +160,53 @@ if (title == "Ahmed Al-barea portfolio") {
 
     // home button *****************************************************
     if (homeTop_ScrolldivBottom <= 0) {
-      document.getElementById("home-btn-desktop").style.boxShadow = "1px 2px 2px #00ff00"; // active color
-      document.getElementById("mobile-home-btn").style.boxShadow = "1px 2px 2px #00ff00"; // active color
+      activeBtn(homeBtn, homeBtnMob);
     }
     if (homeTop_ScrolldivBottom >= 0) {
-      document.getElementById("home-btn-desktop").style.boxShadow = "1px 2px 2px #ff5555"; // default color
-      document.getElementById("mobile-home-btn").style.boxShadow = "1px 2px 2px #ff5555"; // default color
+      defaultBtn(homeBtn, homeBtnMob);
     }
     if (homeBottom_ScrolldivBottom <= 0) {
-      document.getElementById("home-btn-desktop").style.boxShadow = "1px 2px 2px #ff5555"; // default color
-      document.getElementById("mobile-home-btn").style.boxShadow = "1px 2px 2px #ff5555"; // default color
+      defaultBtn(homeBtn, homeBtnMob);
     }
     // work button *****************************************************
     if (workTop_ScrolldivBottom <= 0) {
-      document.getElementById("work-btn-desktop").style.boxShadow = "1px 2px 2px #00ff00"; // active color
-      document.getElementById("mobile-work-btn").style.boxShadow = "1px 2px 2px #00ff00"; // active color
+      activeBtn(workBtn, workBtnMob);
     }
     if (workTop_ScrolldivBottom >= 0) {
-      document.getElementById("work-btn-desktop").style.boxShadow = "1px 2px 2px #ff5555"; // default color
-      document.getElementById("mobile-work-btn").style.boxShadow = "1px 2px 2px #ff5555"; // default color
+      defaultBtn(workBtn, workBtnMob);
     }
     if (workBottom_ScrolldivBottom <= 0) {
-      document.getElementById("work-btn-desktop").style.boxShadow = "1px 2px 2px #ff5555"; // default color
-      document.getElementById("mobile-work-btn").style.boxShadow = "1px 2px 2px #ff5555"; // default color
+      defaultBtn(workBtn, workBtnMob);
     }
     // about button *****************************************************
     if (aboutTop_ScrolldivBottom <= 0) {
-      document.getElementById("about-btn-desktop").style.boxShadow = "1px 2px 2px #00ff00"; // active color
-      document.getElementById("mobile-about-btn").style.boxShadow = "1px 2px 2px #00ff00"; // active color
+      activeBtn(aboutBtn, aboutBtnMob);
     }
     if (aboutTop_ScrolldivBottom >= 0) {
-      document.getElementById("about-btn-desktop").style.boxShadow = "1px 2px 2px #ff5555"; // default color
-      document.getElementById("mobile-about-btn").style.boxShadow = "1px 2px 2px #ff5555"; // default color
+      defaultBtn(aboutBtn, aboutBtnMob);
     }
     if (aboutBottom_ScrolldivBottom <= 0) {
-      document.getElementById("about-btn-desktop").style.boxShadow = "1px 2px 2px #ff5555"; // default color
-      document.getElementById("mobile-about-btn").style.boxShadow = "1px 2px 2px #ff5555"; // default color
+      defaultBtn(aboutBtn, aboutBtnMob);
     }
     // contact button *****************************************************
     if (contactTop_ScrolldivBottom <= 0) {
-      document.getElementById("contact-btn-desktop").style.boxShadow = "1px 2px 2px #00ff00"; // active color
-      document.getElementById("mobile-contact-btn").style.boxShadow = "1px 2px 2px #00ff00"; // active color
+      activeBtn(contactBtn, contactBtnMob);
     }
     if (contactTop_ScrolldivBottom >= 0) {
-      document.getElementById("contact-btn-desktop").style.boxShadow = "1px 2px 2px #ff5555"; // default color
-      document.getElementById("mobile-contact-btn").style.boxShadow = "1px 2px 2px #ff5555"; // default color
+      defaultBtn(contactBtn, contactBtnMob);
     }
     if (contactBottom_ScrolldivBottom <= 0) {
-      document.getElementById("contact-btn-desktop").style.boxShadow = "1px 2px 2px #ff5555"; // default color
-      document.getElementById("mobile-contact-btn").style.boxShadow = "1px 2px 2px #ff5555"; // default color
+      defaultBtn(contactBtn, contactBtnMob);
     }
+    // skill percent section *****************************************************
+    // this condition to fill the percent only once.
+    if (skillsTop_ScrolldivBottom <= 0 && skillsTop_ScrolldivBottom >= -10 ) {
+      fillSkills(); // active color
+    }      
+    if (skillsBottom_ScrolldivBottom <= 0 && skillsBottom_ScrolldivBottom >= -10 ) {
+      fillSkills(); // active color
+    }      
+
   }
 }
 
@@ -420,6 +436,54 @@ if (window.location.href.includes("project-my-logo")) {
 }
 
 
+  // to fill the percen round bar
+  function fillSkills() {
+
+  var skills = document.querySelectorAll(".skill-icon-container");
+  var i = skills.length;
+  
+
+  while (i--) {
+
+    if (skills[i].className.includes("figma")) // condition
+        {skillPercent = 90; fill(skills[i], skillPercent)}; // skill level and function call
+    if (skills[i].className.includes("adobe-xd")) 
+        {skillPercent = 90; fill(skills[i], skillPercent)};
+    if (skills[i].className.includes("adobe-illustrator")) 
+        {skillPercent = 75; fill(skills[i], skillPercent)};
+    if (skills[i].className.includes("photoshop")) 
+        {skillPercent = 70; fill(skills[i], skillPercent)};
+    if (skills[i].className.includes("html")) 
+        {skillPercent = 90; fill(skills[i], skillPercent)};
+    if (skills[i].className.includes("css")) 
+        {skillPercent = 85; fill(skills[i], skillPercent)};
+    if (skills[i].className.includes("javascript")) 
+        {skillPercent = 60; fill(skills[i], skillPercent)};
+    if (skills[i].className.includes("miro")) 
+        {skillPercent = 95; fill(skills[i], skillPercent)};
+    if (skills[i].className.includes("coolors")) 
+        {skillPercent = 95; fill(skills[i], skillPercent)};
+    if (skills[i].className.includes("google-doc")) 
+        {skillPercent = 95; fill(skills[i], skillPercent)};
+    if (skills[i].className.includes("vsc")) 
+        {skillPercent = 90; fill(skills[i], skillPercent)};
+    if (skills[i].className.includes("php")) 
+        {skillPercent = 50; fill(skills[i], skillPercent)};
+
+      function fill(item, skillPercent) {
+        var percent = 1;
+        setInterval(() => {
+            if (percent == skillPercent) {
+                clearInterval();}
+            else {
+                percent++;
+                item.style.background = "conic-gradient( #00ff00 " + percent + "%, #000 0%)";
+                item.setAttribute("data-value", skillPercent+"%");
+            }
+        }, 20);
+    }
+  }
+}
 
 
 // validate email and clear form inputs by reloading page after submit

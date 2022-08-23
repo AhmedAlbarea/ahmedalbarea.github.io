@@ -41,12 +41,17 @@ if (document.title == "Ahmed Al-barea portfolio") {
       designerDeveloper.innerHTML = jobsArr[currentJob];
       // this switch is to change home section according to jobs names
       switch (currentJob) {
+        case 0:
+          document.getElementById("quote-background0").style.opacity = "0.05";
+          
+          break;
         case 1:
           document.getElementById("quote-background0").style.opacity = "0";
-          document.getElementById("quote-background").style.opacity = "0.05";
+          document.getElementById("quote-background3").style.opacity = "0";
+          document.getElementById("quote-background1").style.opacity = "0.05";
           break;
         case 2:
-          document.getElementById("quote-background").style.opacity = "0";
+          document.getElementById("quote-background1").style.opacity = "0";
           document.getElementById("quote-background2").style.opacity = "0.05";
           break;
         case 3:
@@ -54,13 +59,13 @@ if (document.title == "Ahmed Al-barea portfolio") {
           document.getElementById("quote-background3").style.opacity = "0.05";
           break;
         case 0:
-          document.getElementById("quote-background0").style.opacity = "0.05";
           document.getElementById("quote-background3").style.opacity = "0";
+          document.getElementById("quote-background0").style.opacity = "0.05";
           break;
       }
 
       if (currentJob == 3) {
-        currentJob = -1;
+        currentJob = 0;
       } loopQuoteTitles()
     }, 4000);
   } loopQuoteTitles();
@@ -481,7 +486,7 @@ if (window.location.href.includes("project-my-logo")) {
                 item.style.background = "conic-gradient( #00ff00 " + percent + "%, #000 0%)";
                 item.setAttribute("data-value", percent+"%");
             }
-        }, 20);
+        }, 30);
     }
   }
 }

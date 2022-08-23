@@ -191,7 +191,7 @@
 }
 
 /* to change home section according to jobs names  */
-#quote-background,
+#quote-background1,
 #quote-background2,
 #quote-background3 {
     opacity: 0;
@@ -495,7 +495,7 @@
 
 .skill-icon-container::before {
     position: absolute;
-    bottom: -27px;
+    bottom: -22px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1444,14 +1444,19 @@ button {
     }
 
     .about-pic-welcome-container {
-        display: inline-block;
+        width: 98vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         flex-direction: column;
         margin-bottom: 10px;
+        /* border: 1px solid red; */
     }
 
     .my-pic {
         width: 150px;
-        margin-inline-start: 20%;
+        /* margin-inline-start: 20%; */
     }
 
     .about-welcome {
@@ -1482,6 +1487,11 @@ button {
         width: 70px;
         height: 70px;
         padding: 0;
+    }
+
+    
+    .skill-icon-container::before {
+        bottom: -20px;
     }
 
     .skills-icons {

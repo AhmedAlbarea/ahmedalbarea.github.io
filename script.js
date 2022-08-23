@@ -200,13 +200,14 @@ if (title == "Ahmed Al-barea portfolio") {
     }
     // skill percent section *****************************************************
     // this condition to fill the percent only once.
-    if (skillsTop_ScrolldivBottom <= 0 && skillsTop_ScrolldivBottom >= -10 ) {
-      fillSkills(); // active color
+    var skillContainerBackground = document.querySelector(".skill-icon-container").style.background;
+    
+    if (skillsTop_ScrolldivBottom <= 0 && skillContainerBackground == "" ) {
+        fillSkills(); // active color
     }      
-    if (skillsBottom_ScrolldivBottom <= 0 && skillsBottom_ScrolldivBottom >= -10 ) {
-      fillSkills(); // active color
+    if (skillsBottom_ScrolldivBottom <= 0 && skillContainerBackground == "" ) {
+        fillSkills(); // active color
     }      
-
   }
 }
 
@@ -471,14 +472,14 @@ if (window.location.href.includes("project-my-logo")) {
         {skillPercent = 50; fill(skills[i], skillPercent)};
 
       function fill(item, skillPercent) {
-        var percent = 1;
+        var percent = 0;
         setInterval(() => {
             if (percent == skillPercent) {
                 clearInterval();}
             else {
                 percent++;
                 item.style.background = "conic-gradient( #00ff00 " + percent + "%, #000 0%)";
-                item.setAttribute("data-value", skillPercent+"%");
+                item.setAttribute("data-value", percent+"%");
             }
         }, 20);
     }

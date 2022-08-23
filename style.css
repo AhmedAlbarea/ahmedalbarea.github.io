@@ -490,25 +490,22 @@
     height: 90px;
     opacity: 0.97;
     border-radius: 30% 20%;
-    border: 1px solid #555;
+    overflow:visible !important;
 }
 
 .skill-icon-container::before {
     position: absolute;
-    top: 0;
+    bottom: -27px;
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 1;
     content: attr(data-value);
-    font-size: large;
-    width: 60%;
-    height: 0%;
-    background: #000;
+    font-size: small;
+    width: 30%;
+    height: 30%;
     border-radius: 30% 20%;
     z-index: 1010;
-    transition: 1s;
-    animation: percentAnimation 2s infinite;
 }
 
 
@@ -523,25 +520,6 @@
     border-radius: 30% 20%;
     z-index: 101;
     box-shadow: 0px 0px 20px #222;
-    /* animation: skillsAnimation 2s infinite; */
-}
-
-
-@keyframes percentAnimation2 {
-    0% {
-        transform: scale(1.1);
-        
-    }
-}
-
-@keyframes percentAnimation {
-   
-    0% {height: 0%; opacity:0;}
-    20% {height: 20%; opacity: 1;}
-    100% {height: 0%; opacity: 0;}
-    /* 0% {opacity: 0;}
-    50% {opacity: 1;}
-    100% {opacity: 0;} */
 }
 
 /* contact form  */
@@ -1413,7 +1391,6 @@ button {
         height: fit-content;
         display: block;
         border-radius: 50%;
-        border: 1px solid rgb(255, 85, 85, 0.5);
     }
 
     #closeMenuImg {
@@ -1421,7 +1398,6 @@ button {
         height: fit-content;
         display: none;
         border-radius: 50%;
-        border: 1px solid rgb(0, 255, 0, 0.5);
     }
 
     .quote {
@@ -1499,18 +1475,19 @@ button {
 
     .skills-grid {
         grid-template-columns: auto auto auto;
-        gap: 25px;
-        padding: 20px;
+        gap: 50px 20px;
     }
 
     .skill-icon-container {
         width: 70px;
         height: 70px;
+        padding: 0;
     }
 
     .skills-icons {
         width: 50px;
         border: 7px solid transparent;
+        padding: 0;
     }
 
 

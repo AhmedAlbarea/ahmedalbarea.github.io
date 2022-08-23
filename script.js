@@ -456,25 +456,25 @@ if (window.location.href.includes("project-my-logo")) {
     if (skills[i].className.includes("adobe-xd")) 
         {skillPercent = 90; fill(skills[i], skillPercent)};
     if (skills[i].className.includes("adobe-illustrator")) 
-        {skillPercent = 75; fill(skills[i], skillPercent)};
+        {skillPercent = 90; fill(skills[i], skillPercent)};
     if (skills[i].className.includes("photoshop")) 
-        {skillPercent = 70; fill(skills[i], skillPercent)};
+        {skillPercent = 80; fill(skills[i], skillPercent)};
     if (skills[i].className.includes("html")) 
         {skillPercent = 90; fill(skills[i], skillPercent)};
     if (skills[i].className.includes("css")) 
-        {skillPercent = 85; fill(skills[i], skillPercent)};
+        {skillPercent = 90; fill(skills[i], skillPercent)};
     if (skills[i].className.includes("javascript")) 
-        {skillPercent = 60; fill(skills[i], skillPercent)};
+        {skillPercent = 70; fill(skills[i], skillPercent)};
     if (skills[i].className.includes("miro")) 
-        {skillPercent = 95; fill(skills[i], skillPercent)};
+        {skillPercent = 97; fill(skills[i], skillPercent)};
     if (skills[i].className.includes("coolors")) 
-        {skillPercent = 95; fill(skills[i], skillPercent)};
+        {skillPercent = 97; fill(skills[i], skillPercent)};
     if (skills[i].className.includes("google-doc")) 
-        {skillPercent = 95; fill(skills[i], skillPercent)};
+        {skillPercent = 97; fill(skills[i], skillPercent)};
     if (skills[i].className.includes("vsc")) 
         {skillPercent = 90; fill(skills[i], skillPercent)};
     if (skills[i].className.includes("php")) 
-        {skillPercent = 50; fill(skills[i], skillPercent)};
+        {skillPercent = 60; fill(skills[i], skillPercent)};
 
       function fill(item, skillPercent) {
         var percent = 0;

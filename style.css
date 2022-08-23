@@ -1405,6 +1405,7 @@ button {
         cursor: pointer;
         border: none;
         overflow: hidden;
+        resize: none;
     }
 
     #menuImg {

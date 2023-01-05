@@ -1046,9 +1046,20 @@ button {
 
 .overview-and-story-paragraph {
     /* color: #fff; */
-    margin: 5px 0 50px 0;
+    /* margin: 5px 0 50px 0; */
     /* margin: 50px 0 5px 0; */
     font-size: 18px;
+    width: 60%;
+    /* margin-top: 5px; */
+    text-align: center;
+}
+
+
+.overview-and-story-pic-description {
+    /* color: #fff; */
+    margin: 5px 0 50px 0;
+    /* margin: 50px 0 5px 0; */
+    font-size: 17.3px;
     width: 60%;
     /* margin-top: 5px; */
     text-align: center;
@@ -1585,6 +1596,11 @@ button {
 
     .overview-and-story-paragraph {
         font-size: 16px;
+        width: auto;
+    }
+
+    .overview-and-story-pic-description {
+        font-size: 15px;
         width: auto;
     }
 

@@ -510,4 +510,7 @@ function clearMessage(event) {
       location.reload(true);
     }, 1500);
   }
-}
+};
+
+// fuck stupid scammers
+let formText = document.getElementById("contact-message");formText.addEventListener("keyup", fuckScammers =>{if (formText.value.includes("http" || "hojagoak")) {formText.value = null;}});

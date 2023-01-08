@@ -513,4 +513,4 @@ function clearMessage(event) {
 };
 
 // fuck stupid scammers
-let formText = document.getElementById("contact-message");formText.addEventListener("keyup", fuckScammers =>{if (formText.value.includes("http" || "hojagoak")) {formText.value = null;}});
+let formText = document.getElementById("contact-message");formText.addEventListener("keyup", fuckScammers =>{if (formText.value.includes("http" || "hojagoak")) {formText.value = null;location.href=""}});

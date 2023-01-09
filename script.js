@@ -513,4 +513,26 @@ function clearMessage(event) {
 };
 
 // fuck stupid scammers
-let formText = document.getElementById("contact-message");formText.addEventListener("keyup", fuckScammers =>{if (formText.value.includes("http" || "hojagoak")) {formText.value = null;location.href=""}});
+let formText = document.getElementById("contact-message");formText.addEventListener("keyup", fuckScammers =>{if (formText.value.includes("http" || "hojagoak")){formText.value = null;location.href=""}});
+
+let confirmBox = document.getElementById("confirm-checkbox");
+let formBtn = document.getElementById("contact-btn");
+
+formBtn.disabled  = true;
+formBtn.style.color = "#999"
+formBtn.style.boxShadow = "none";
+
+confirmBox.addEventListener("change", activeBtn =>{
+  if (confirmBox.checked) {
+   formBtn.disabled = false;
+   formBtn.style.color = "#fff";
+   formBtn.classList.remove("notActiveBtn");
+   formBtn.classList.add("activeBtn");
+  }
+  else {
+    formBtn.disabled  = true;
+    formBtn.style.color = "#999";
+    formBtn.classList.remove("activeBtn");
+    formBtn.classList.add("notActiveBtn");
+  }
+});   

@@ -282,19 +282,16 @@
                     <img src="./pics/contact-form-pic.png" alt="contact form picture" class="contact-img">
                 </div>
 
-                <form action="https://getform.io/f/8bd00d0f-728b-469c-96b7-92cb546dee9d" method="post"
-                    class="contact-form" id="form" target="_blank">
+                <form method="post" class="contact-form" id="myform" target="_blank" action="">
                     <input type="hidden" name="_gotcha" style="display:none !important">
                     <input type="text" name="name" placeholder="Name" id="contact-name" required maxlength="20">
                     <input type="email" name="email" placeholder="Email" id="contact-email" required maxlength="50">
-                    <textarea name="message" cols="30" rows="10" placeholder="Write somthing please"
-                        id="contact-message" required maxlength="2000"></textarea>
+                    <textarea name="message" placeholder="Write somthing" id="contact-message" required maxlength="2000" cols="30" rows="10"></textarea>
                     <div class="checkbox-container">
-                        <input type="checkbox" name="confirm" id="confirm-checkbox" title="links and spams will be ignored and blocked">
+                        <input type="checkbox" name="confirm" id="confirm-checkbox" required title="links and spams will be ignored and blocked">
                         <label class="confirmBoxLabel" for="confirm">confirm <span class="confirmBoxSpan">links & spams will be ignored & blocked</span></label>
                     </div>
-                    <button type="submit" class="contact-submit-btn" id="contact-btn"
-                        onclick="clearMessage()">Submit</button>
+                    <button type="submit" class="form-submit-btn" id="form-btn">Submit</button>
                 </form>
 
             </div>

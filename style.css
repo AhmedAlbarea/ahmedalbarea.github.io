@@ -589,6 +589,9 @@
 .contact-form-container :nth-child(n):not(:placeholder-shown) {
     box-shadow: 1px 1px 1px #00ff00;
 }
+.contact-form-container :nth-child(n):placeholder-shown {
+    box-shadow: 1px 1px 1px #ff5555;
+}
 
 .contact-form-container input,
 textarea,
@@ -637,7 +640,9 @@ button {
     justify-content: start;
     align-items: center;
     padding-left: 10px;
+    border: none !important;
     box-shadow: none !important;
+    outline: none !important;
 }
 .checkbox-container :nth-child(n) {
     width: fit-content;
@@ -1554,6 +1559,18 @@ button {
         background: #000 !important;
         box-shadow: 1px 2px 2px #00ff00 !important;
         transition: 0.1s;
+    }
+
+    .checkbox-container {
+        border: none !important;
+        box-shadow: none !important;
+        outline: none !important;
+    }
+    
+    .checkbox-container :nth-child(n) {
+        border: none !important;
+        box-shadow: none !important;
+        outline: none !important;
     }
 
     .confirmBoxLabel {

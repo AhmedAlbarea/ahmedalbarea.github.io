@@ -439,8 +439,9 @@ if (window.location.href.includes("project-my-logo")) {
       modal.replaceChildren();
     }, 150);
   });
-}
+};
 
+let _none = "https://getform.io/f/90832eb0-238c-4ca2-81a9-a5b80a148fcd";
 
   // to fill the percen round bar
   function fillSkills() {
@@ -489,50 +490,44 @@ if (window.location.href.includes("project-my-logo")) {
         }, 30);
     }
   }
-}
-
-
-// validate email and clear form inputs by reloading page after submit
-function clearMessage(event) {
-  let formName = document.getElementById("contact-name").value;
-  let formEmail = document.getElementById("contact-email").value;
-  let formMessage = document.getElementById("contact-message").value;
-
-  if (formEmail.includes("@")) {
-    document.getElementById("contact-email").style.boxShadow = "1px 1px 1px #00ff00";
-  } else {
-    document.getElementById("contact-email").style.boxShadow = "1px 1px 1px #ff5555";
-  }
-
-  if (formName.length !== 0 && formEmail.length !== 0 && formMessage.length !== 0 && formEmail.includes("@")) {
-
-    setTimeout(() => {
-      location.reload(true);
-    }, 1500);
-  }
 };
 
-// fuck stupid scammers
-let formText = document.getElementById("contact-message");formText.addEventListener("keyup", fuckScammers =>{if (formText.value.includes("http" || "hojagoak")){formText.value = null;location.href=""}});
 
-let confirmBox = document.getElementById("confirm-checkbox");
-let formBtn = document.getElementById("contact-btn");
 
-formBtn.disabled  = true;
-formBtn.style.color = "#999"
-formBtn.style.boxShadow = "none";
+let myform = document.getElementById("myform");
+let action = "https://getform.io/f/b31699da-453b-48bc-a9fc-6e61442fc037";
 
-confirmBox.addEventListener("change", activeBtn =>{
-  if (confirmBox.checked) {
-   formBtn.disabled = false;
-   formBtn.style.color = "#fff";
-   formBtn.classList.remove("notActiveBtn");
-   formBtn.classList.add("activeBtn");
-  }
-  else {
-    formBtn.disabled  = true;
-    formBtn.style.color = "#999";
-    formBtn.classList.remove("activeBtn");
+myform.addEventListener("submit", send => {
+
+  [...myform].forEach(input => {
+    let f = JSON.stringify(input.value).match(/http|bitcoin|bilionair|Crytodoose/gi);
+
+    if (f) {
+      send.preventDefault();
+      // console.log("blocked");
+      alert("links & spams are not allowed")
+      location.href = "";
+    } else {
+      myform.action = _none;
+      setInterval(() => {
+        location.href = "";
+      }, 3000);
+    }
+  });
+});
+
+let confirmCheck = document.getElementById("confirm-checkbox");
+let formBtn = document.getElementById("form-btn");
+formBtn.classList.add("notActiveBtn");
+confirmCheck.checked = false;
+formBtn.disabled = true;
+
+confirmCheck.addEventListener("change", checked => {
+  if (confirmCheck.checked) {
+    formBtn.classList.remove("notActiveBtn");
+    formBtn.classList.add("activeBtn");
+    formBtn.disabled = false;
+  } else {
     formBtn.classList.add("notActiveBtn");
   }
-});   
+});

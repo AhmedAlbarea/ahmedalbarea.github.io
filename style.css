@@ -169,25 +169,54 @@
     /* #1C2833 */
 }
 
-/* quote  */
-
-.quote-container {
+/* home section */
+.home-section {
+    background-image: url(./pics/office.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: top;
+    background-size: 100vw 100%;
+    height: 90vh;
+    min-height: 700px;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    min-height: 100vh;
+    z-index: 1;
+}
+
+/* quote  */
+.quote-background-container {
+    position: absolute;
+    top: 210px;
+    left: 15%;
+    right: 15%;
+    height: 57%;
+    margin: 0;
+    overflow: hidden;
+    opacity: 0.5;
 }
 
 .quote-background {
-    width: max-content;
-    object-fit: cover;
-    position: fixed;
-    top: 100px;
-    z-index: -1;
-    opacity: 0.05;
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+    position: absolute;
+    z-index: 2;
     transition: 1s;
+}
+
+.quote-container {
+    background-image: url(./pics/desk.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: bottom;
+    background-size: 1400px 100%;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    height: 90vh;
+    min-height: 700px;
+    z-index: 3;
 }
 
 /* to change home section according to jobs names  */
@@ -198,20 +227,19 @@
 }
 
 .quote {
+    position: relative;
     font-family: Arial, Helvetica, sans-serif;
     color: #fff;
-    /* font-size: 1.4rem; */
-    font-size: 2.5vw;
+    font-size: 160%;
     z-index: 1;
-    text-shadow: 5px 5px 5px #000;
-}
-
-.quote-highlight {
-    color: #f1d302;
+    margin-bottom: 50px;
+    max-width: 450px;
+    max-height: 500px;
 }
 
 /* it's the same quote highlight, but this id for js code */
 #designer-developer {
+    color: #f1d302;
     opacity: 0;
     transition: 1.5s;
 }
@@ -1439,10 +1467,26 @@ button {
         border-radius: 50%;
     }
 
+    .home-section {
+        background-size: 140vw 100%;
+    }
+
+    .quote-background-container {
+        left: 0.5%;
+        right: 0.5%;
+    }
+
+    .quote-background {
+        min-width: 700px;
+        height: 100%;
+        object-fit: cover;
+    }
+
     .quote {
         font-family: Arial, Helvetica, sans-serif;
         /* color: #fff; */
         font-size: 1.2rem;
+        margin-bottom: 90px;
     }
 
 

@@ -28,6 +28,7 @@ if (document.title == "Ahmed Al-barea portfolio") {
   var designerDeveloper = document.getElementById("designer-developer");
   var jobsArr = [".......","UX Designer", "Logo Designer", "Front-End Developer"];
   var currentJob = 0;
+  let opacity = "0.5";
   designerDeveloper.style.opacity = "1";
   designerDeveloper.innerHTML = jobsArr[currentJob];
 
@@ -42,25 +43,25 @@ if (document.title == "Ahmed Al-barea portfolio") {
       // this switch is to change home section according to jobs names
       switch (currentJob) {
         case 0:
-          document.getElementById("quote-background0").style.opacity = "0.05";
+          document.getElementById("quote-background0").style.opacity = opacity;
           
           break;
         case 1:
           document.getElementById("quote-background0").style.opacity = "0";
           document.getElementById("quote-background3").style.opacity = "0";
-          document.getElementById("quote-background1").style.opacity = "0.05";
+          document.getElementById("quote-background1").style.opacity = opacity;
           break;
         case 2:
           document.getElementById("quote-background1").style.opacity = "0";
-          document.getElementById("quote-background2").style.opacity = "0.05";
+          document.getElementById("quote-background2").style.opacity = opacity;
           break;
         case 3:
           document.getElementById("quote-background2").style.opacity = "0";
-          document.getElementById("quote-background3").style.opacity = "0.05";
+          document.getElementById("quote-background3").style.opacity = opacity;
           break;
         case 0:
           document.getElementById("quote-background3").style.opacity = "0";
-          document.getElementById("quote-background0").style.opacity = "0.05";
+          document.getElementById("quote-background0").style.opacity = opacity;
           break;
       }
 
@@ -96,7 +97,7 @@ function defaultBtn(item, item2) {
 }
 
 if (title !== "Ahmed Al-barea portfolio") {
-  //  if not on home page, highlight only work button
+  //  if not on home page, highlight work button only
   activeBtn(workBtn, workBtnMob);
 }
 
@@ -493,6 +494,7 @@ let _none = "https://getform.io/f/90832eb0-238c-4ca2-81a9-a5b80a148fcd";
 };
 
 
+if (document.title == "Ahmed Al-barea portfolio") {
 
 let myform = document.getElementById("myform");
 let action = "https://getform.io/f/b31699da-453b-48bc-a9fc-6e61442fc037";
@@ -531,3 +533,4 @@ confirmCheck.addEventListener("change", checked => {
     formBtn.classList.add("notActiveBtn");
   }
 });
+}

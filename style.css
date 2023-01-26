@@ -1469,6 +1469,7 @@ button {
 
     .home-section {
         background-size: 140vw 100%;
+        margin-top: -7rem;
     }
 
     .quote-background-container {

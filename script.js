@@ -22,55 +22,61 @@ if (pageUrl.includes("#/contact")) {
 }
 
 
-// quote jobs slider every some seconds for text and backgrounds
-if (document.title == "Ahmed Al-barea portfolio") {
+window.addEventListener("load", loaded => {
 
-  var designerDeveloper = document.getElementById("designer-developer");
-  var jobsArr = [".......","UX Designer", "Logo Designer", "Front-End Developer"];
-  var currentJob = 0;
-  let opacity = "0.5";
-  designerDeveloper.style.opacity = "1";
-  designerDeveloper.innerHTML = jobsArr[currentJob];
+  // quote jobs slider every some seconds for text and backgrounds
+  if (document.title == "Ahmed Al-barea portfolio") {
 
-  function loopQuoteTitles() {
-    setTimeout(() => {
-      designerDeveloper.style.opacity = "0";
-    }, 2000);
-    setTimeout(() => {
-      currentJob++;
-      designerDeveloper.style.opacity = "1";
-      designerDeveloper.innerHTML = jobsArr[currentJob];
-      // this switch is to change home section according to jobs names
-      switch (currentJob) {
-        case 0:
-          document.getElementById("quote-background0").style.opacity = opacity;
-          
-          break;
-        case 1:
-          document.getElementById("quote-background0").style.opacity = "0";
-          document.getElementById("quote-background3").style.opacity = "0";
-          document.getElementById("quote-background1").style.opacity = opacity;
-          break;
-        case 2:
-          document.getElementById("quote-background1").style.opacity = "0";
-          document.getElementById("quote-background2").style.opacity = opacity;
-          break;
-        case 3:
-          document.getElementById("quote-background2").style.opacity = "0";
-          document.getElementById("quote-background3").style.opacity = opacity;
-          break;
-        case 0:
-          document.getElementById("quote-background3").style.opacity = "0";
-          document.getElementById("quote-background0").style.opacity = opacity;
-          break;
-      }
+    var designerDeveloper = document.getElementById("designer-developer");
+    var jobsArr = [".......", "UX / UI Designer", "Logo Designer", "Front-End Developer"];
+    var currentJob = 0;
+    let opacity = "0.5";
+    designerDeveloper.style.opacity = "1";
+    designerDeveloper.innerHTML = jobsArr[currentJob];
 
-      if (currentJob == 3) {
-        currentJob = 0;
-      } loopQuoteTitles()
-    }, 4000);
-  } loopQuoteTitles();
-}
+    function loopQuoteTitles() {
+      setTimeout(() => {
+        designerDeveloper.style.opacity = "0";
+      }, 2000);
+      setTimeout(() => {
+        currentJob++;
+        designerDeveloper.style.opacity = "1";
+        designerDeveloper.innerHTML = jobsArr[currentJob];
+        // this switch is to change home section according to jobs names
+        switch (currentJob) {
+          case 0:
+            document.getElementById("quote-background0").style.opacity = opacity;
+
+            break;
+          case 1:
+            document.getElementById("quote-background0").style.opacity = "0";
+            document.getElementById("quote-background3").style.opacity = "0";
+            document.getElementById("quote-background1").style.opacity = opacity;
+            break;
+          case 2:
+            document.getElementById("quote-background1").style.opacity = "0";
+            document.getElementById("quote-background2").style.opacity = opacity;
+            break;
+          case 3:
+            document.getElementById("quote-background2").style.opacity = "0";
+            document.getElementById("quote-background3").style.opacity = opacity;
+            break;
+          case 0:
+            document.getElementById("quote-background3").style.opacity = "0";
+            document.getElementById("quote-background0").style.opacity = opacity;
+            break;
+        }
+
+        if (currentJob == 3) {
+          currentJob = 0;
+        }
+        loopQuoteTitles()
+      }, 4000);
+    }
+    loopQuoteTitles();
+  };
+
+});
 
 
 //  to change home nav button colors on scroll according to sections
@@ -313,6 +319,10 @@ var storyBtn = document.getElementById("story-btn");
 var overviewContainer = document.getElementById("overview-container");
 var storyContainer = document.getElementById("story-container");
 
+var stoOveBtnActive = "rgba(0, 255, 0, 0.7)";
+var stoOveBtnNotActive = "rgba(255, 0, 0, 0.7)";
+
+
 function clickStoryBtn() {
 
   if ((overviewContainer.style.display = "flex")) {
@@ -325,8 +335,8 @@ function clickStoryBtn() {
 
     setTimeout(() => {
 
-      storyBtn.style.borderTopColor = "#00ff00";
-      overviewBtn.style.borderTopColor = "#ff0000";
+      storyBtn.style.borderTopColor = stoOveBtnActive;
+      overviewBtn.style.borderTopColor = stoOveBtnNotActive;
 
       storyContainer.style.opacity = "1";
       overviewContainer.style.opacity = "0";
@@ -354,8 +364,8 @@ function clickOverviewBtn() {
 
     setTimeout(() => {
 
-      storyBtn.style.borderTopColor = "#ff0000";
-      overviewBtn.style.borderTopColor = "#00ff00";
+      storyBtn.style.borderTopColor = stoOveBtnNotActive;
+      overviewBtn.style.borderTopColor = stoOveBtnActive;
 
       storyContainer.style.opacity = "0";
       overviewContainer.style.opacity = "1";

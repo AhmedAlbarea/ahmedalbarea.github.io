@@ -185,10 +185,10 @@
 /* quote  */
 .quote-background-container {
     position: absolute;
-    top: 210px;
+    top: 220px;
     left: 15%;
     right: 15%;
-    height: 57%;
+    height: 55%;
     margin: 0;
     overflow: hidden;
     opacity: 0.5;

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-barea Project-My portfolio</title>
+    <link rel="shortcut icon" href="./pics/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="project-body" id="body">
+
+    <!-- page fixed header -->
+    <header class="header" id="header">
+
+        <!-- logo and name -->
+        <div class="header-left">
+            <a href="index.html" class="logo-container-a"><img class="logo-img" src="./pics/my-logo.png"
+                    alt="my logo"></a>
+
+            <h1 class="myname">AHMED AL-BAREA</h1>
+        </div>
+
+        <div class="header-right">
+            <!-- desktop nav menu -->
+            <a href="index.html" class="nav-item-a" id="home-btn-desktop">HOME</a>
+            <a href="index.html#/work" class="nav-item-a" id="work-btn-desktop">WORK</a>
+            <a href="index.html#/about" class="nav-item-a" id="about-btn-desktop">ABOUT</a>
+            <a href="index.html#/contact" class="nav-item-a" id="contact-btn-desktop">CONTACT</a>
+
+
+            <!--btn burger menu  -->
+            <button class="btn-burger-menu" id="btn" onclick="clickMenu()">
+                <img class="menu-img" id="menuImg" src="./pics/open-menu.png" alt="burger menu icon">
+                <img class="close-menu-img" id="closeMenuImg" src="./pics/close-menu.png" alt="close menu icon"></button>
+        </div>
+    </header>
+
+    <!-- main container -->
+    <div class="main-container-div">
+
+        <!-- mobile menu -->
+        <div class="mobile-menu-container" id="mobile-menu">
+            <a href="index.html" class="nav-item-a-mobile" id="mobile-home-btn">HOME</a>
+            <!-- no need clickMobileMenuItem for home button because it will reload the page -->
+            <a href="index.html#/work" class="nav-item-a-mobile" id="mobile-work-btn"
+                onclick="clickMobileMenuItem()">WORK</a>
+            <a href="index.html#/about" class="nav-item-a-mobile" id="mobile-about-btn"
+                onclick="clickMobileMenuItem()">ABOUT</a>
+            <a href="index.html#/contact" class="nav-item-a-mobile" id="mobile-contact-btn"
+                onclick="clickMobileMenuItem()">CONTACT</a>
+        </div>
+
+        <!-- project banner -->
+        <div class="banner-container">
+            <img src="./project-my-portfolio/banner-pics.png" alt="Ahmed's logo as a company sign on top of building"
+                class="bannerbg bannerbg-logo">
+            <img src="./project-my-portfolio/banner-pics-mobile.png" alt="Ahmed's logo as a company sign on top of building"
+                class="bannerbg-logo-mobile">
+            <!-- share button -->
+            <img src="./pics/share.png" alt="share project" title="share project" onclick="copyCurrentURL()"
+                id="share-project-btn">
+        </div>
+
+
+
+        <!-- Section project title -->
+        <div class="section-title-container">
+            <div class="left-line"></div>
+            <div class="middle-line">
+                <h2 class="title-text">My Portfolio</h2>
+            </div>
+            <div class="right-line"></div>
+        </div>
+
+
+        <!-- project intro -->
+        <div class="project-intro-container">
+            <h2 class="project-intro-text">I started learning web development and building this portfolio at the same time. 
+                This is the final result. I designed and coded everything.
+                 no libraries, no copy, and paste. </h2>
+        </div>
+
+
+        <!-- just to go to story button  -->
+        <div class="go-to-section" id="overview-&-story-section-portfolio"></div>
+
+
+
+        <!-- story and overview Main container -->
+        <div class="case-container">
+
+            <div class="case-btn-container">
+                <div class="case-btns" id="overview-btn" onclick="clickOverviewBtn()">Project Overview</div>
+                <div class="case-btns" id="story-btn" onclick="clickStoryBtn()">Project Story</div>
+            </div>
+
+
+            <!-- overview container -->
+            <div class="overview-container" id="overview-container">
+
+                <h2 class="overview-and-story-steps">Ideate and Sketches</h2>
+                <img class="overview-and-story-img" src="./project-my-portfolio/sketches.png" alt="my portfolio sketches">
+
+
+                <h2 class="overview-and-story-steps">Simple Design System</h2>
+                <img class="overview-and-story-img" src="./project-my-portfolio/design-system.png"
+                    alt="more logo sketches">
+
+
+                <h2 class="overview-and-story-steps">Responsiveness</h2>
+                <img class="overview-and-story-img" src="./project-my-portfolio/responsivness.png"
+                    alt="portfolio on different devices">
+
+
+
+
+
+                <!-- Thanks -->
+                <h2 class="overview-and-story-steps" style="text-decoration: none; padding: 0 5px;">Thanks &#128578;
+                </h2>
+                <p class="overview-and-story-paragraph">Thank you for your time reviewing my work.
+                    <br>
+                    <br>
+                    For more, check <a href="#overview-&-story-section-portfolio" class="overview-and-story-links">project
+                        story</a> or <a class="overview-and-story-links" href="index.html#/contact">contact me</a>
+                </p>
+
+
+                <div class="divider"></div>
+
+
+            </div>
+
+
+            <!-- story container -->
+            <div class="story-container" id="story-container">
+
+
+                <h2 class="overview-and-story-steps">Why?</h2>
+                <p class="overview-and-story-paragraph">&#9679; In the last course of my <a
+                    class="overview-and-story-links"
+                    href="https://coursera.org/share/67a9920cc1781717d8fcaa21999b6abf" target="_blank">Google UX
+                    Design Professional Certificate.</a>, I was asked to provide a complete online portfolio. 
+                    They introduced website builders to do that. At that time my web development knowledge wasn't good, 
+                    so I tried website builders but I couldn't do what I wanted because they were limited. 
+                    So I started learning Front-End development and built this portfolio.
+                    <br>
+                    &#9679; Since I started my career as a designer and developer, it was essential to have an online portfolio.
+                </p>
+
+
+                <h2 class="overview-and-story-steps">Key challenges</h2>
+                <p class="overview-and-story-paragraph">
+
+                    <span class="highlighted-text">Do it better:</span>
+                    <br>
+                    Learning web development and working on this portfolio simultaneously caused a lot of rework.
+                    When I finish working on a part, I learn how to do it better, so I do it better.
+                    <br><br>
+                    <span class="highlighted-text">Do it my way</span>
+                    <br>
+                    When I see how other developers do things, I don't just copy and paste. 
+                    Sometimes it doesn't make sense to me even if it works for them, 
+                    so I do things my way. that's why it took me a while to finish. 
+                </p>
+
+
+                <h2 class="overview-and-story-steps">Toolkit</h2>
+                <div class="toolkit-container">
+                    <img class="toolkit-icons" src="./toolkit-icons/adobe-illustrator.png" alt="adobe illustrator icon"
+                        title="adobe illustrator">
+                    <img class="toolkit-icons" src="./toolkit-icons/photoshop-.png" alt="adobe Photoshop icon"
+                        title="adobe Photoshop">
+                    <img class="toolkit-icons" src="./toolkit-icons/visual-studio-code-.png" alt="visual studio code icon"
+                        title="visual studio code">
+                    <img class="toolkit-icons" src="./toolkit-icons/html-5-.png" alt="HTML5 icon"
+                        title="HTML5">
+                    <img class="toolkit-icons" src="./toolkit-icons/css3-.png" alt="CSS3 icon"
+                        title="CSS3">
+                    <img class="toolkit-icons" src="./toolkit-icons/javascript-.png" alt="javascript icon"
+                        title="Javascript">
+                </div>
+
+
+
+                <h2 class="overview-and-story-steps">Sitemap.</h2>
+                <p class="overview-and-story-paragraph">With fast and easy access in mind, I decided to make it with minimum pages as possible.</p>
+                <img class="overview-and-story-img" src="./project-my-portfolio/sitemap.jpg" alt="my portfolio sitemap">
+               
+               
+                <h2 class="overview-and-story-steps">Ideate and Sketches.</h2>
+                <p class="overview-and-story-paragraph">From the sitemap, I sketched some ideas.</p>
+                <img class="overview-and-story-img" src="./project-my-portfolio/sketches.png" alt="my portfolio sketches">
+
+
+                <h2 class="overview-and-story-steps">Prototype.</h2>
+                <p class="overview-and-story-paragraph">I created a quick high-fidelity prototype to see if any changes or updates were needed.</p>
+                <img class="overview-and-story-img" src="./project-my-portfolio/prototype.png" alt="hi-fi prototypes">
+                <p class="overview-and-story-pic-description">Click <a class="overview-and-story-links"
+                        href="https://www.figma.com/proto/9kDKT36rwGQDK6seeaRjS4/My-Portfolio?type=design&node-id=1-2&scaling=scale-down&page-id=0%3A1"
+                        target="_blank">here</a> to view prototype on Figma</p>
+
+                <h2 class="overview-and-story-steps">Landing section.</h2>
+                <p class="overview-and-story-paragraph">I had some design ideas for landing section, then decided to go with the office one. 
+                    and soon you'll see me behind that desk.</p>
+                <img class="overview-and-story-img" src="./project-my-portfolio/landing-section.png"
+                    alt="landing-section">
+
+
+
+                <div class="divider"></div>
+
+
+
+                 <!-- takeaways -->
+                 <h2 class="overview-and-story-steps">Takeaways</h2>
+
+                 <div class="takeaways-next-container">
+ 
+                     <div class="takeaways-next-father-1">
+ 
+                         <div class="takeaways-point-title">
+                             <h2 class="highlighted-text">Impact</h2>
+                         </div>
+ 
+                         <div class="takeaways-paragraph-container">
+                             <p class="takeaways-paragraph">Online presence is important and with this portfolio, 
+                                it will be easier for clients to reach me and to see my work then according to that decide to work with me or not.
+                             </p>
+                         </div>
+                     </div>
+ 
+                     <div class="takeaways-next-father-2">
+ 
+                         <div class="takeaways-point-title">
+                             <h2 class="highlighted-text">What I learned</h2>
+                         </div>
+ 
+                         <div class="takeaways-paragraph-container">
+                             <p class="takeaways-paragraph">
+                                 &diams; Details matter and to make it simple, a lot of work needs to be done.
+                                 <br>
+                                 &diams; I learned a lot about web development.
+                             </p>
+                         </div>
+                     </div>
+                 </div>
+ 
+ 
+                 <div class="divider"></div>
+ 
+ 
+                 <!-- Next steps -->
+                 <h2 class="overview-and-story-steps">Next steps</h2>
+                 <div class="takeaways-next-container">
+ 
+                     <div class="takeaways-next-father-1">
+ 
+                         <div class="takeaways-point-title">
+                             <h2 class="highlighted-text">Log in form </h2>
+                         </div>
+ 
+                         <div class="takeaways-paragraph-container">
+                             <p class="takeaways-paragraph">I will add a sign-up / login system.
+                             </p>
+                         </div>
+                     </div>
+ 
+                     <div class="takeaways-next-father-2">
+ 
+                         <div class="takeaways-point-title">
+                             <h2 class="highlighted-text">All in one place</h2>
+                         </div>
+ 
+                         <div class="takeaways-paragraph-container">
+                             <p class="takeaways-paragraph">I will add a big form where users can select all the things they want on their website or design and then submit it to me.
+                             </p>
+                         </div>
+                     </div>
+                 </div>
+ 
+ 
+                 <div class="divider"></div>
+ 
+ 
+                 <!-- Thanks -->
+                 <h2 class="overview-and-story-steps" style="text-decoration: none; padding: 0 5px;">Thanks &#128578;
+                 </h2>
+                 <p class="thanks-paragraph">Thank you for your time reviewing my work.
+                     <br>
+                     If there is anything you would like to talk about, do not hesitate to <a
+                         class="overview-and-story-links" href="index.html#/contact">contact me</a>
+                 </p>
+
+
+                <div class="divider"></div>
+
+
+            </div>
+        </div>
+
+
+    </div> <!-- end of main container -->
+
+
+
+
+    <!-- footer -->
+    <footer class="footer" id="project-footer">
+
+        <div class="footer-left footer-div">
+            <a href="https://www.linkedin.com/in/ahmed-al-barea-49a061223/" class="linkedin-a"><img class="linkedin-img"
+                    src="./pics/linkedin.png" alt="my linkedin"></a>
+        </div>
+        <div class="footer-middle footer-div">
+            <h6 class="copyright">Copyright &copy; Ahmed Al-barea
+            </h6>
+        </div>
+        <div class="footer-right footer-div">
+            <a title="How about some tea!" href="https://paypal.me/AhmedBarea?country.x=C2&locale.x=en_US"
+                class="coffee-a"><img class="coffee-img" src="./pics/coffee.png" alt="buy me a coffee"> </a>
+        </div>
+
+    </footer>
+
+    <!-- go to top btn -->
+    <a href="#" id="toTopBtn-container" title="go to top">
+        <img class="to-top-img" src="./pics/to-top.png" alt="go to top">
+    </a>
+
+
+    <!-- script -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
